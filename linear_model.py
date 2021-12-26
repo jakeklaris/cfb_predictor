@@ -17,7 +17,7 @@ class RegressionModel:
         self.model_type = model_type
         self.df = data
     
-    def create_model(self):
+    def create_model(self, test_size=.1):
         self.df.replace({'Conference_Game': {True: 1, False: 0}}, inplace=True)
         self.df.replace({'Neutral_Site': {True: 1, False: 0}}, inplace=True)
 
@@ -27,7 +27,7 @@ class RegressionModel:
 
         # Split data into training and test data
         self.train_features, self.test_features, self.train_labels, self.test_labels = \
-            train_test_split(features, labels, test_size=0.1, random_state=randint(1,10))
+            train_test_split(features, labels, test_size=test_size, random_state=randint(1,10))
         
         # Train linear regression model
         if self.model_type == 'Linear':
@@ -40,6 +40,11 @@ class RegressionModel:
 
         self.model.fit(self.train_features, self.train_labels)
     
+    def predict_single(self, single_df):
+        features = single_df.drop(['GameID','Week','Home_Team','Away_Team','Score_Diff','Real_Odds'], axis=1)
+        self.predicted_margin = self.model.predict(features)
+        return self.predicted_margin
+
     def evaluate_model(self,plot=False,train=False):
         features = self.train_features if train else self.test_features
         actual_labels = self.train_labels if train else self.test_labels

@@ -8,12 +8,13 @@ from rankings import load_rankings
 
 
 class NeuralNet:
+
     def __init__(self,rankings,data):
         self.rankings = rankings
         self.df = data
     
-    def create_model(self):
-        self.test_df = self.df.sample(frac = .1)
+    def create_model(self, test_size=.1):
+        self.test_df = self.df.sample(frac = test_size)
         self.train_df = self.df.drop(self.test_df.index)
         
         excluded = ['GameID','Week','Home_Team','Away_Team','Score_Diff','Real_Odds']
@@ -35,6 +36,11 @@ class NeuralNet:
         self.learn = tabular_learner(self.dls, metrics=mae, lr=10e-3)
         self.learn.fit(4)
  
+    def predict_single(self, single_df):
+        dl = self.learn.dls.test_dl(single_df)
+        prediction = self.learn.get_preds(dl=dl)[0].numpy()    
+        return prediction
+
     def predict(self,row):
         return 'Home' if row['Predicted_Margin'] > row['Real_Odds'] else 'Away'
 
