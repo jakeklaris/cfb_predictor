@@ -1,0 +1,33 @@
+"""
+CFB_Predictor python package configuration.
+"""
+from setuptools import setup
+setup(
+    name='cfb_predictor',
+    version='0.1.0',
+    packages=['cfb_predictor'],
+    include_package_data=True,
+    install_requires=[
+        'arrow',
+        'bs4',
+        'Flask',
+        'html5validator',
+        'pycodestyle',
+        'pydocstyle',
+        'pylint',
+        'pytest',
+        'pytest-mock',
+        'requests',
+        'cfbd',
+        'click',
+        'fastai',
+        'jinja2',
+        'matplotlib',
+        'numpy',
+        'pandas',
+        'scipy',
+        'seaborn',
+        'sklearn',
+    ],
+    python_requires='>=3.6',
+)

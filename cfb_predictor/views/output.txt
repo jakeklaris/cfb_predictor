@@ -1,0 +1,20 @@
+Generated Linear Regression Model
+
+Training Data Error: r^2: 0.4103102243395049
+Training Data Error: MSE: 258.2201332247429
+49.4195688225539% Correct over 603 Predictions
+
+Test Data Error: r^2: 0.4231096542455911
+Test Data Error: MSE: 243.25846495366562
+51.470588235294116% Correct over 68 Predictions
+
+Generated Lasso Regression Model
+
+Training Data Error: r^2: 0.4038787657244959
+Training Data Error: MSE: 252.13151134042334
+47.76119402985074% Correct over 603 Predictions
+
+Test Data Error: r^2: 0.41563824796311766
+Test Data Error: MSE: 319.4248470699894
+54.41176470588235% Correct over 68 Predictions
+
