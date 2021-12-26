@@ -1,4 +1,5 @@
 import pandas as pd
+import logging
 
 from odds import get_real_odds
 from odds import get_games
@@ -53,22 +54,22 @@ def create_data_frame(rankings):
             ]
             data.append(cur_row)
         except (ValueError):
-            print('Could not retrieve SP+ rankings for game {}, team 1: {}, team 2: {} in week {}'.format(game['id'], game['home_team'], game['away_team'], game['week']))
+            logging.info('Could not retrieve SP+ rankings for game {}, team 1: {}, team 2: {} in week {}'.format(game['id'], game['home_team'], game['away_team'], game['week']))
     
     add_spreads(data)
 
     df = pd.DataFrame(data, columns = [
         'GameID',
         'Week',
-        'Home Team',
-        'Away Team',
-        'SP+ Offense Diff', 
-        'SP+ Defense Diff', 
-        'SP+ Special Teams Diff', 
-        'ELO Dif',
-        'Conference Game', 
-        'Neutral Site', 
-        'Score Diff', 
+        'Home_Team',
+        'Away_Team',
+        'SP+_Offense_Diff', 
+        'SP+_Defense_Diff', 
+        'SP+_Special_Teams_Diff', 
+        'ELO_Diff',
+        'Conference_Game', 
+        'Neutral_Site', 
+        'Score_Diff', 
         'Real_Odds'
         ])
     

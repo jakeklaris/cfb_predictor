@@ -1,4 +1,5 @@
 import cfbd
+import logging
 
 def configure_game_api():
     configuration = cfbd.Configuration()
@@ -30,6 +31,6 @@ def get_real_odds():
         try:
             odds[line['id']] = float(line['lines'][0]['spread']) * -1
         except TypeError:
-            print("couldnt get spread for game {}".format(line['id']))
+            logging.info("couldnt get spread for game {}".format(line['id']))
     return odds
     
