@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from numpy.random.mtrand import randint
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso
@@ -6,6 +7,7 @@ from sklearn import metrics
 
 from data import create_data_frame
 from rankings import load_rankings
+
 
 class RegressionModel:
 
@@ -25,7 +27,7 @@ class RegressionModel:
 
         # Split data into training and test data
         self.train_features, self.test_features, self.train_labels, self.test_labels = \
-            train_test_split(features, labels, test_size=0.1, random_state=3)
+            train_test_split(features, labels, test_size=0.1, random_state=randint(1,10))
         
         # Train linear regression model
         if self.model_type == 'Linear':
