@@ -1,4 +1,5 @@
 import pathlib
+from cfb_predictor.config import RANKINGS_FOLDER
 
 NAME_CHANGE = {
     'Ohio St.': 'Ohio State',
@@ -58,7 +59,7 @@ NAME_CHANGE = {
 
 def load_rankings():
     team_rankings = {}
-    dir = pathlib.Path('SP+Data')
+    dir = pathlib.Path(RANKINGS_FOLDER)
     for i in range(2,16):
         path = f'week{i}rankings.csv'
         file_path = dir/path

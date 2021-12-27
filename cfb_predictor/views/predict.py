@@ -1,13 +1,13 @@
-from linear_model import RegressionModel
-from neural_model import NeuralNet
-from data import create_single_data_frame, create_data_frame
-from rankings import load_rankings
+from cfb_predictor.views.linear_model import RegressionModel
+from cfb_predictor.views.neural_model import NeuralNet
+from cfb_predictor.views.data import create_single_data_frame, create_data_frame
+from cfb_predictor.views.rankings import load_rankings
 
-def main():
+def predict(home_team, away_team, week, neutral):
     # load team SP+ rankings and create DataFrame for game and old data
     team_rankings = load_rankings()
-    new_game = create_single_data_frame(team_rankings, home_team='North Texas', \
-        away_team='Michigan', neutral_site=True, week=5,)
+    new_game = create_single_data_frame(team_rankings, home_team=home_team, \
+        away_team=away_team, neutral_site=neutral, week=week)
     training_games = create_data_frame(team_rankings)
 
     # create Linear model
@@ -30,6 +30,8 @@ def main():
     print("Lasso: {}".format(lasso_prediction))
     print("Neural Net: {}".format(neural_prediction))
 
+    return linear_prediction, lasso_prediction, neural_prediction
+
 if __name__ == '__main__':
-    main()
+    predict()
     

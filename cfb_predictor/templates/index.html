@@ -1,4 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-Hello world!
+    <head>
+        <title>College Football Predictor</title>
+    </head>
+
+    <body>
+        <form action="/" method="get" enctype="multipart/form-data">
+            <div class="form_group">
+                <label>Home Team</label>
+                <input type="text" name="home_team" required/>
+            </div>
+
+            <div class="form_group">
+                <label>Away Team</label>
+                <input type="text" name="away_team" requred/>
+            </div>
+
+            <div class="form_group">
+                <label>Week</label>
+                <input type="text" name="week" required/>
+            </div>
+
+            <div class="form_group">
+                <label>Neutral Site</label>
+                <input type="text" name="neutral_site" requred/>     
+            </div>  
+
+            <input type="submit" name="predict" value="Predict Matchup"/>
+        </form>
+
+        {% if empty %}
+
+        {% else %}
+            <h2>
+                {% if neutral_site %}
+                Predictions for {{teams.away}} vs {{teams.home}} at a neutral site for Week {{week}}:
+                {% else %}
+                Predictions for {{teams.away}} at {{teams.home}} in Week {{week}}:
+                {% endif %}
+            </h2>
+            <div>
+                <p>Linear Regression Model:
+                    {% if predictions.linear < 0 %}
+                    {{teams.away}} by {{predictions.linear * -1}}
+                    {% else %}
+                    {{teams.home}} by {{predictions.linear}}
+                    {% endif %}
+                </p>
+                <p>Lasso Regression Model: 
+                    {% if predictions.lasso < 0 %}
+                    {{teams.away}} by {{predictions.lasso * -1}}
+                    {% else %}
+                    {{teams.home}} by {{predictions.lasso}}
+                    {% endif %}
+                </p>
+                <p>Neural Network Model: 
+                    {% if predictions.neural < 0 %}
+                    {{teams.away}} by {{predictions.neural * -1}}
+                    {% else %}
+                    {{teams.home}} by {{predictions.neural}}
+                    {% endif %}
+                </p>
+                <h3>Average Prediction:
+                    {% if average < 0 %}
+                    {{teams.away}} by {{average * -1}}
+                    {% else %}
+                    {{teams.home}} by {{average}}
+                    {% endif %}                    
+                </h3>
+            </div>
+        {% endif %}
+    </body>
+
 </html>
