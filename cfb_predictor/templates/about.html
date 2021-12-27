@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>College Football Predictor</title>
+    </head>
+    <body>
+        With the Michigan Semi-Final looming, my mind couldn't be more focused on CFB. I thought now would be a good time to further my Python Data Analytics knowledge as well as put into practice some machine learning methods that I learned this past semester.
+
+        Here I have built a model that aims to predict the scoring margin of two college football teams in a game (a spread, if you will). It compares it against the current spread in Vegas to make a prediction on which side of the spread to take.
+        
+        I have built 3 models using three common machine learning methods --> Linear Regression, Lasso Regression and Neural Networks.
+        
+        Linear -->  validated it with MSE and R^2
+        Neural --> trained it to minimize MAE, with a learning rate that minimizes MAE
+        
+        First Step: Scraping ESPN for SP+ Rankings on a team for a given week
+        
+        10 attributes of a given game are taken into account when determining the predicted margin of victory. SP+ ranking differential (scraped from ESPN website), ELO differential (taken from collegefootballdata.com), home team are a few examples.
+        
+        The good news is all three of my models predict Michigan to outperform the current spread from Vegas. The bad news is Vegas's spread still has Mich losing by 7.5 so outperforming that doesn't mean much.
+        
+        After creating the predictor on the backend, I decided to make a Web Application that would show my predictions for all upcoming games in a nice UI. Although I don't enjoy front end development much, Flask provides an easy way to attach my back-end code and it didn't take too much effort to make a playable UI.
+        
+        This was a passion project for me but I would love to hear any feedback or thoughts that anyone has. I hope to continue developing this project and making it better using more data and correlated attributes. Maybe one day we can actually beat Vegas at a strong clip! See below for a link to the website and to my gtihub repo where all my code is currently living.
+        
+        Sources: 
+        collegefootballdata API for Vegas odds and most attributes
+        Espn SP+ rankings (weekly) for SP+ diff attribute
+        
+        Sklearn for linear/lasso regression
+        Fastai for neural network learning
+        
+        Pandas for data analysis and manipulation
+        Bs4 for web scraping
+        
+        Flask for web development 
+        Google app engine/Github pages for web hosting 
+    </body>
+</html>

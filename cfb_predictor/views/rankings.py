@@ -54,7 +54,8 @@ NAME_CHANGE = {
     'UConn': 'Connecticut',
     'NMSU': 'New Mexico State',
     'FAU': 'Florida Atlantic',
-    'San Jose St.': 'San José State'
+    'San Jose St.': 'San José State',
+    'App. St.': 'Appalachian State'
 }
 
 def load_rankings():

@@ -24,7 +24,7 @@ def show_index():
     req = flask.request.args
 
     neutral_site = True if req['neutral_site'] == 'yes' else False
-    week = req['week']
+    week = int(req['week'])
     home_team = req['home_team']
     away_team = req['away_team']
 
@@ -55,3 +55,7 @@ def show_index():
         'average': average_prediction
     }
     return flask.render_template("index.html", **context)
+
+@cfb_predictor.app.route('/about/')
+def show_about():
+    return flask.render_template("about.html")
