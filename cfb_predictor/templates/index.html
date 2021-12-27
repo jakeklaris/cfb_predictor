@@ -2,416 +2,434 @@
 <html lang="en">
     <head>
         <title>College Football Predictor</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     </head>
 
-    <body>
-        <div id="headers" class="header">
-            <h1 class="title">2021 College Football Matchup Predictor</h1>
+    <body class="body">
+        <header id="masthead" class="site-header" role="banner">
+            <div class="container">
+                <div class="site-branding">
+                    <h1 class="site-title">
+                        <a href="/">2021 College Football Matchup Predictor</a>
+                    </h1>
+                    <h2 class="site-description">
+                        Predict the outcome of any matchup in the 2021 College Football season
+                    </h2>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="site-content container">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    <form action="/" method="get" enctype="multipart/form-data">
+                        <div class="form_group">
+                            <label for="home_team">Choose a Home Team</label>
+                            <select name="home_team" id="home_team" required>
+                                <optgroup label="ACC">
+                                    <option value="Boston College">Boston College</option>
+                                    <option value="Clemson">Clemson</option>
+                                    <option value="Florida State">Florida State</option>
+                                    <option value="Louisville">Louisville</option>
+                                    <option value="NC State">NC State</option>
+                                    <option value="Syracuse">Syracuse</option>
+                                    <option value="Wake Forest">Wake Forest</option>
+                                    <option value="Duke">Duke</option>
+                                    <option value="Georgia Tech">Georgia Tech</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="Pittsburgh">Pitt</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Virginia Tech">Virginia Tech</option>
+                                </optgroup>
+                                <optgroup label="American">
+                                    <option value="Cincinnati">Cincinnati</option>
+                                    <option value="Connecticut">UConn</option>
+                                    <option value="East Carolina">East Carolina</option>
+                                    <option value="South Florida">USF</option>
+                                    <option value="Temple">Temple</option>
+                                    <option value="UCF">UCF</option>
+                                    <option value="Houston">Houston</option>
+                                    <option value="Memphis">Memphis</option>
+                                    <option value="Navy">Navy</option>
+                                    <option value="SMU">SMU</option>
+                                    <option value="Tulane">Tulane</option>
+                                    <option value="Tulsa">Tulsa</option>
+                                </optgroup>
+                                <optgroup label="Big 12">
+                                    <option value="Baylor">Baylor</option>
+                                    <option value="Iowa State">Iowa State</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kansas State">Kansas State</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oklahoma State">Oklahoma State</option>
+                                    <option value="TCU">TCU</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="Texas Tech">Texas Tech</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                </optgroup>
+                                <optgroup label="Big Ten">                                              
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Michigan State">Michigan State</option>
+                                    <option value="Ohio State">Ohio State</option>
+                                    <option value="Penn State">Penn State</option>
+                                    <option value="Rutgers">Rutgers</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Northwestern">Northwestern</option>
+                                    <option value="Purdue">Purdue</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                </optgroup>
+                                <optgroup label="Conference USA">                   
+                                    <option value="Charlotte">Charlotte</option>
+                                    <option value="East Carolina">East Carolina</option>
+                                    <option value="Florida Atlantic">Florida Atlantic</option>
+                                    <option value="Florida International">Florida International</option>
+                                    <option value="Marshall">Marshall</option>
+                                    <option value="Middle Tennessee">Middle Tennessee</option>
+                                    <option value="Old Dominion">Old Dominion</option>
+                                    <option value="Western Kentucky">Western Kentucky</option>
+                                    <option value="Louisiana Tech">Louisiana Tech</option>
+                                    <option value="North Texas">North Texas</option>
+                                    <option value="Rice">Rice</option>
+                                    <option value="Southern Mississippi">Southern Miss</option>
+                                    <option value="UAB">UAB</option>
+                                    <option value="UTEP">UTEP</option>
+                                    <option value="UTSA">UTSA</option>
+                                </optgroup>
+                                <optgroup label="Independents">
+                                    <option value="Army">Army</option>
+                                    <option value="BYU">BYU</option>
+                                    <option value="Liberty">Liberty</option>
+                                    <option value="New Mexico State">New Mexico State</option>
+                                    <option value="Notre Dame">Notre Dame</option>
+                                    <option value="UMass">UMass</option>
+                                </optgroup>
+                                <optgroup label="Mid-American">                     
+                                    <option value="Akron">Akron</option>
+                                    <option value="Bowling Green">Bowling Green</option>
+                                    <option value="Buffalo">Buffalo</option>
+                                    <option value="Kent State">Kent State</option>
+                                    <option value="Miami (OH)">Miami (OH)</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Ball State">Ball State</option>
+                                    <option value="Central Michigan">Central Michigan</option>
+                                    <option value="Eastern Michigan">Eastern Michigan</option>
+                                    <option value="Northern Illinois">Northern Illinois</option>
+                                    <option value="Toledo">Toledo</option>
+                                    <option value="Western Michigan">Western Michigan</option>
+                                </optgroup>
+                                <optgroup label="Mountain West">                       
+                                    <option value="Fresno State">Fresno State</option>
+                                    <option value="Hawai'i">Hawaii</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="San Diego State">San Diego State</option>
+                                    <option value="UNLV">UNLV</option>
+                                    <option value="Air Force">Air Force</option>
+                                    <option value="Boise State">Boise State</option>
+                                    <option value="Colorado State">Colorado State</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="Utah State">Utah State</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </optgroup>
+                                <optgroup label="Pac-12">
+                                    <option value="California">California</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Oregon State">Oregon State</option>
+                                    <option value="Stanford">Stanford</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="Washington State">Washington State</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arizona State">Arizona State</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="UCLA">UCLA</option>
+                                    <option value="USC">USC</option>
+                                    <option value="Utah">Utah</option>
+                                </optgroup>
+                                <optgroup label="SEC">
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Vanderbilt">Vanderbilt</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Auburn">Auburn</option>
+                                    <option value="LSU">LSU</option>
+                                    <option value="Mississippi State">Mississippi State</option>
+                                    <option value="Ole Miss">Ole Miss</option>
+                                    <option value="Texas A&amp;M">Texas A&amp;M</option>
+                                </optgroup>   
+                                <optgroup label="Sun Belt">
+                                    <option value="Appalachian State">Appalachian State</option>
+                                    <option value="Coastal Carolina">Coastal Carolina</option>
+                                    <option value="Georgia Southern">Georgia Southern</option>
+                                    <option value="Georgia State">Georgia State</option>
+                                    <option value="Troy">Troy</option>
+                                    <option value="Arkansas State">Arkansas State</option>
+                                    <option value="Louisiana">Louisiana-Lafayette</option>
+                                    <option value="Louisiana Monroe">Louisiana-Monroe</option>
+                                    <option value="South Alabama">South Alabama</option>
+                                    <option value="Texas State">Texas State</option>
+                                </optgroup>                                                                                                                                         
+                                </select>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="away_team">Choose an Away Team</label>
+                            <select name="away_team" id="away_team" required>
+                                <optgroup label="ACC">
+                                    <option value="Boston College">Boston College</option>
+                                    <option value="Clemson">Clemson</option>
+                                    <option value="Florida State">Florida State</option>
+                                    <option value="Louisville">Louisville</option>
+                                    <option value="NC State">NC State</option>
+                                    <option value="Syracuse">Syracuse</option>
+                                    <option value="Wake Forest">Wake Forest</option>
+                                    <option value="Duke">Duke</option>
+                                    <option value="Georgia Tech">Georgia Tech</option>
+                                    <option value="North Carolina">North Carolina</option>
+                                    <option value="Pittsburgh">Pitt</option>
+                                    <option value="Virginia">Virginia</option>
+                                    <option value="Virginia Tech">Virginia Tech</option>
+                                </optgroup>
+                                <optgroup label="American">
+                                    <option value="Cincinnati">Cincinnati</option>
+                                    <option value="Connecticut">UConn</option>
+                                    <option value="East Carolina">East Carolina</option>
+                                    <option value="South Florida">USF</option>
+                                    <option value="Temple">Temple</option>
+                                    <option value="UCF">UCF</option>
+                                    <option value="Houston">Houston</option>
+                                    <option value="Memphis">Memphis</option>
+                                    <option value="Navy">Navy</option>
+                                    <option value="SMU">SMU</option>
+                                    <option value="Tulane">Tulane</option>
+                                    <option value="Tulsa">Tulsa</option>
+                                </optgroup>
+                                <optgroup label="Big 12">
+                                    <option value="Baylor">Baylor</option>
+                                    <option value="Iowa State">Iowa State</option>
+                                    <option value="Kansas">Kansas</option>
+                                    <option value="Kansas State">Kansas State</option>
+                                    <option value="Oklahoma">Oklahoma</option>
+                                    <option value="Oklahoma State">Oklahoma State</option>
+                                    <option value="TCU">TCU</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="Texas Tech">Texas Tech</option>
+                                    <option value="West Virginia">West Virginia</option>
+                                </optgroup>
+                                <optgroup label="Big Ten">                                              
+                                    <option value="Indiana">Indiana</option>
+                                    <option value="Maryland">Maryland</option>
+                                    <option value="Michigan">Michigan</option>
+                                    <option value="Michigan State">Michigan State</option>
+                                    <option value="Ohio State">Ohio State</option>
+                                    <option value="Penn State">Penn State</option>
+                                    <option value="Rutgers">Rutgers</option>
+                                    <option value="Illinois">Illinois</option>
+                                    <option value="Iowa">Iowa</option>
+                                    <option value="Minnesota">Minnesota</option>
+                                    <option value="Nebraska">Nebraska</option>
+                                    <option value="Northwestern">Northwestern</option>
+                                    <option value="Purdue">Purdue</option>
+                                    <option value="Wisconsin">Wisconsin</option>
+                                </optgroup>
+                                <optgroup label="Conference USA">                   
+                                    <option value="Charlotte">Charlotte</option>
+                                    <option value="East Carolina">East Carolina</option>
+                                    <option value="Florida Atlantic">Florida Atlantic</option>
+                                    <option value="Florida International">Florida International</option>
+                                    <option value="Marshall">Marshall</option>
+                                    <option value="Middle Tennessee">7</option>
+                                    <option value="Old Dominion">Old Dominion</option>
+                                    <option value="Western Kentucky">Western Kentucky</option>
+                                    <option value="Louisiana Tech">Louisiana Tech</option>
+                                    <option value="North Texas">North Texas</option>
+                                    <option value="Rice">Rice</option>
+                                    <option value="Southern Mississippi">Southern Miss</option>
+                                    <option value="UAB">UAB</option>
+                                    <option value="UTEP">UTEP</option>
+                                    <option value="UTSA">UTSA</option>
+                                </optgroup>
+                                <optgroup label="Independents">
+                                    <option value="Army">Army</option>
+                                    <option value="BYU">BYU</option>
+                                    <option value="Liberty">Liberty</option>
+                                    <option value="New Mexico State">New Mexico State</option>
+                                    <option value="Notre Dame">Notre Dame</option>
+                                    <option value="UMass">UMass</option>
+                                </optgroup>
+                                <optgroup label="Mid-American">                     
+                                    <option value="Akron">Akron</option>
+                                    <option value="Bowling Green">Bowling Green</option>
+                                    <option value="Buffalo">Buffalo</option>
+                                    <option value="Kent State">Kent State</option>
+                                    <option value="Miami (OH)">Miami (OH)</option>
+                                    <option value="Ohio">Ohio</option>
+                                    <option value="Ball State">Ball State</option>
+                                    <option value="Central Michigan">Central Michigan</option>
+                                    <option value="Eastern Michigan">Eastern Michigan</option>
+                                    <option value="Northern Illinois">Northern Illinois</option>
+                                    <option value="Toledo">Toledo</option>
+                                    <option value="Western Michigan">Western Michigan</option>
+                                </optgroup>
+                                <optgroup label="Mountain West">                       
+                                    <option value="Fresno State">Fresno State</option>
+                                    <option value="Hawai'i">Hawaii</option>
+                                    <option value="Nevada">Nevada</option>
+                                    <option value="San Diego State">San Diego State</option>
+                                    <option value="UNLV">6</option>
+                                    <option value="Air Force">Air Force</option>
+                                    <option value="Boise State">Boise State</option>
+                                    <option value="Colorado State">Colorado State</option>
+                                    <option value="New Mexico">New Mexico</option>
+                                    <option value="Utah State">Utah State</option>
+                                    <option value="Wyoming">Wyoming</option>
+                                </optgroup>
+                                <optgroup label="Pac-12">
+                                    <option value="California">California</option>
+                                    <option value="Oregon">Oregon</option>
+                                    <option value="Oregon State">Oregon State</option>
+                                    <option value="Stanford">Stanford</option>
+                                    <option value="Washington">Washington</option>
+                                    <option value="Washington State">Washington State</option>
+                                    <option value="Arizona">Arizona</option>
+                                    <option value="Arizona State">Arizona State</option>
+                                    <option value="Colorado">Colorado</option>
+                                    <option value="UCLA">UCLA</option>
+                                    <option value="USC">USC</option>
+                                    <option value="Utah">Utah</option>
+                                </optgroup>
+                                <optgroup label="SEC">
+                                    <option value="Florida">Florida</option>
+                                    <option value="Georgia">Georgia</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="Missouri">Missouri</option>
+                                    <option value="South Carolina">South Carolina</option>
+                                    <option value="Tennessee">Tennessee</option>
+                                    <option value="Vanderbilt">Vanderbilt</option>
+                                    <option value="Alabama">Alabama</option>
+                                    <option value="Arkansas">Arkansas</option>
+                                    <option value="Auburn">Auburn</option>
+                                    <option value="LSU">LSU</option>
+                                    <option value="Mississippi State">Mississippi State</option>
+                                    <option value="Ole Miss">Ole Miss</option>
+                                    <option value="Texas A&amp;M">Texas A&amp;M</option>
+                                </optgroup>   
+                                <optgroup label="Sun Belt">
+                                    <option value="Appalachian State">Appalachian State</option>
+                                    <option value="Coastal Carolina">Coastal Carolina</option>
+                                    <option value="Georgia Southern">Georgia Southern</option>
+                                    <option value="Georgia State">Georgia State</option>
+                                    <option value="Troy">Troy</option>
+                                    <option value="Arkansas State">Arkansas State</option>
+                                    <option value="Louisiana">Louisiana-Lafayette</option>
+                                    <option value="Louisiana Monroe">Louisiana-Monroe</option>
+                                    <option value="South Alabama">South Alabama</option>
+                                    <option value="Texas State">Texas State</option>
+                                </optgroup>                                                                                                                                         
+                                </select>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="week">Choose a Week</label>
+                            <select name="week" id="week" required>
+                            <optgroup label="Regular Season">
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                            </optgroup>
+                            <optgroup label="Post-Season">
+                                <option value="14">Conference Chamionship Week</option>
+                                <option value="15">Bowl Game</option>
+                            </optgroup>
+                            </select>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="neutral_site">Neutral Site?</label>
+                            <select name="neutral_site" id="neutral" required>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>  
+
+                        <input type="submit" name="predict" value="Predict Matchup"/>
+                    </form>
+
+                    {% if empty %}
+
+                    {% else %}
+                        <h2>
+                            {% if neutral_site %}
+                                {% if week == 14 %}
+                                Predictions for {{teams.away}} vs {{teams.home}} at a neutral site in Conference Championship Week:
+                                {% elif week == 15 %}
+                                Predictions for {{teams.away}} vs {{teams.home}} at a neutral site in a Bowl Game:                   
+                                {% else %}
+                                Predictions for {{teams.away}} vs {{teams.home}} at a neutral site in Week {{week}}:
+                                {% endif %}                
+                            {% else %}
+                                {% if week == 14 %}
+                                Predictions for {{teams.away}} at {{teams.home}} in Conference Championship Week:
+                                {% elif week == 15 %}
+                                Predictions for {{teams.away}} at {{teams.home}} in a Bowl Game:                   
+                                {% else %}
+                                Predictions for {{teams.away}} at {{teams.home}} in Week {{week}}:
+                                {% endif %}
+                            {% endif %}
+                        </h2>
+                        <div>
+                            <p>Linear Regression Model:
+                                {% if predictions.linear < 0 %}
+                                {{teams.away}} by {{predictions.linear * -1}}
+                                {% else %}
+                                {{teams.home}} by {{predictions.linear}}
+                                {% endif %}
+                            </p>
+                            <p>Lasso Regression Model: 
+                                {% if predictions.lasso < 0 %}
+                                {{teams.away}} by {{predictions.lasso * -1}}
+                                {% else %}
+                                {{teams.home}} by {{predictions.lasso}}
+                                {% endif %}
+                            </p>
+                            <p>Neural Network Model: 
+                                {% if predictions.neural < 0 %}
+                                {{teams.away}} by {{'%0.1f'| format(predictions.neural * -1|float)}}
+                                {% else %}
+                                {{teams.home}} by {{'%0.1f'| format(predictions.neural|float)}}
+                                {% endif %}
+                            </p>
+                            <h3>Average Prediction:
+                                {% if average < 0 %}
+                                {{teams.away}} by {{average * -1}}
+                                {% else %}
+                                {{teams.home}} by {{average}}
+                                {% endif %}                    
+                            </h3>
+                        </div>
+                    {% endif %}
+                </main>
+            </div>
         </div>
-
-        <form action="/" method="get" enctype="multipart/form-data">
-            <div class="form_group">
-                <label for="home_team">Choose a Home Team</label>
-                <select name="home_team" id="home_team" required>
-                    <optgroup label="ACC">
-                        <option value="Boston College">Boston College</option>
-                        <option value="Clemson">Clemson</option>
-                        <option value="Florida State">Florida State</option>
-                        <option value="Louisville">Louisville</option>
-                        <option value="NC State">NC State</option>
-                        <option value="Syracuse">Syracuse</option>
-                        <option value="Wake Forest">Wake Forest</option>
-                        <option value="Duke">Duke</option>
-                        <option value="Georgia Tech">Georgia Tech</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="Pittsburgh">Pitt</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Virginia Tech">Virginia Tech</option>
-                    </optgroup>
-                    <optgroup label="American">
-                        <option value="Cincinnati">Cincinnati</option>
-                        <option value="Connecticut">UConn</option>
-                        <option value="East Carolina">East Carolina</option>
-                        <option value="South Florida">USF</option>
-                        <option value="Temple">Temple</option>
-                        <option value="UCF">UCF</option>
-                        <option value="Houston">Houston</option>
-                        <option value="Memphis">Memphis</option>
-                        <option value="Navy">Navy</option>
-                        <option value="SMU">SMU</option>
-                        <option value="Tulane">Tulane</option>
-                        <option value="Tulsa">Tulsa</option>
-                    </optgroup>
-                    <optgroup label="Big 12">
-                        <option value="Baylor">Baylor</option>
-                        <option value="Iowa State">Iowa State</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kansas State">Kansas State</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oklahoma State">Oklahoma State</option>
-                        <option value="TCU">TCU</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Texas Tech">Texas Tech</option>
-                        <option value="West Virginia">West Virginia</option>
-                    </optgroup>
-                    <optgroup label="Big Ten">                                              
-                        <option value="Indiana">Indiana</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Michigan State">Michigan State</option>
-                        <option value="Ohio State">Ohio State</option>
-                        <option value="Penn State">Penn State</option>
-                        <option value="Rutgers">Rutgers</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Northwestern">Northwestern</option>
-                        <option value="Purdue">Purdue</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                    </optgroup>
-                    <optgroup label="Conference USA">                   
-                        <option value="Charlotte">Charlotte</option>
-                        <option value="East Carolina">East Carolina</option>
-                        <option value="Florida Atlantic">Florida Atlantic</option>
-                        <option value="Florida International">Florida International</option>
-                        <option value="Marshall">Marshall</option>
-                        <option value="Middle Tennessee">Middle Tennessee</option>
-                        <option value="Old Dominion">Old Dominion</option>
-                        <option value="Western Kentucky">Western Kentucky</option>
-                        <option value="Louisiana Tech">Louisiana Tech</option>
-                        <option value="North Texas">North Texas</option>
-                        <option value="Rice">Rice</option>
-                        <option value="Southern Mississippi">Southern Miss</option>
-                        <option value="UAB">UAB</option>
-                        <option value="UTEP">UTEP</option>
-                        <option value="UTSA">UTSA</option>
-                    </optgroup>
-                    <optgroup label="Independents">
-                        <option value="Army">Army</option>
-                        <option value="BYU">BYU</option>
-                        <option value="Liberty">Liberty</option>
-                        <option value="New Mexico State">New Mexico State</option>
-                        <option value="Notre Dame">Notre Dame</option>
-                        <option value="UMass">UMass</option>
-                    </optgroup>
-                    <optgroup label="Mid-American">                     
-                        <option value="Akron">Akron</option>
-                        <option value="Bowling Green">Bowling Green</option>
-                        <option value="Buffalo">Buffalo</option>
-                        <option value="Kent State">Kent State</option>
-                        <option value="Miami (OH)">Miami (OH)</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Ball State">Ball State</option>
-                        <option value="Central Michigan">Central Michigan</option>
-                        <option value="Eastern Michigan">Eastern Michigan</option>
-                        <option value="Northern Illinois">Northern Illinois</option>
-                        <option value="Toledo">Toledo</option>
-                        <option value="Western Michigan">Western Michigan</option>
-                    </optgroup>
-                    <optgroup label="Mountain West">                       
-                        <option value="Fresno State">Fresno State</option>
-                        <option value="Hawai'i">Hawaii</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="San Diego State">San Diego State</option>
-                        <option value="UNLV">UNLV</option>
-                        <option value="Air Force">Air Force</option>
-                        <option value="Boise State">Boise State</option>
-                        <option value="Colorado State">Colorado State</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="Utah State">Utah State</option>
-                        <option value="Wyoming">Wyoming</option>
-                    </optgroup>
-                    <optgroup label="Pac-12">
-                        <option value="California">California</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Oregon State">Oregon State</option>
-                        <option value="Stanford">Stanford</option>
-                        <option value="Washington">Washington</option>
-                        <option value="Washington State">Washington State</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arizona State">Arizona State</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="UCLA">UCLA</option>
-                        <option value="USC">USC</option>
-                        <option value="Utah">Utah</option>
-                    </optgroup>
-                    <optgroup label="SEC">
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Vanderbilt">Vanderbilt</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="Auburn">Auburn</option>
-                        <option value="LSU">LSU</option>
-                        <option value="Mississippi State">Mississippi State</option>
-                        <option value="Ole Miss">Ole Miss</option>
-                        <option value="Texas A&amp;M">Texas A&amp;M</option>
-                    </optgroup>   
-                    <optgroup label="Sun Belt">
-                        <option value="Appalachian State">Appalachian State</option>
-                        <option value="Coastal Carolina">Coastal Carolina</option>
-                        <option value="Georgia Southern">Georgia Southern</option>
-                        <option value="Georgia State">Georgia State</option>
-                        <option value="Troy">Troy</option>
-                        <option value="Arkansas State">Arkansas State</option>
-                        <option value="Louisiana">Louisiana-Lafayette</option>
-                        <option value="Louisiana Monroe">Louisiana-Monroe</option>
-                        <option value="South Alabama">South Alabama</option>
-                        <option value="Texas State">Texas State</option>
-                    </optgroup>                                                                                                                                         
-                    </select>
-            </div>
-
-            <div class="form_group">
-                <label for="away_team">Choose an Away Team</label>
-                <select name="away_team" id="away_team" required>
-                    <optgroup label="ACC">
-                        <option value="Boston College">Boston College</option>
-                        <option value="Clemson">Clemson</option>
-                        <option value="Florida State">Florida State</option>
-                        <option value="Louisville">Louisville</option>
-                        <option value="NC State">NC State</option>
-                        <option value="Syracuse">Syracuse</option>
-                        <option value="Wake Forest">Wake Forest</option>
-                        <option value="Duke">Duke</option>
-                        <option value="Georgia Tech">Georgia Tech</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="Pittsburgh">Pitt</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Virginia Tech">Virginia Tech</option>
-                    </optgroup>
-                    <optgroup label="American">
-                        <option value="Cincinnati">Cincinnati</option>
-                        <option value="Connecticut">UConn</option>
-                        <option value="East Carolina">East Carolina</option>
-                        <option value="South Florida">USF</option>
-                        <option value="Temple">Temple</option>
-                        <option value="UCF">UCF</option>
-                        <option value="Houston">Houston</option>
-                        <option value="Memphis">Memphis</option>
-                        <option value="Navy">Navy</option>
-                        <option value="SMU">SMU</option>
-                        <option value="Tulane">Tulane</option>
-                        <option value="Tulsa">Tulsa</option>
-                    </optgroup>
-                    <optgroup label="Big 12">
-                        <option value="Baylor">Baylor</option>
-                        <option value="Iowa State">Iowa State</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kansas State">Kansas State</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oklahoma State">Oklahoma State</option>
-                        <option value="TCU">TCU</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Texas Tech">Texas Tech</option>
-                        <option value="West Virginia">West Virginia</option>
-                    </optgroup>
-                    <optgroup label="Big Ten">                                              
-                        <option value="Indiana">Indiana</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Michigan State">Michigan State</option>
-                        <option value="Ohio State">Ohio State</option>
-                        <option value="Penn State">Penn State</option>
-                        <option value="Rutgers">Rutgers</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Northwestern">Northwestern</option>
-                        <option value="Purdue">Purdue</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                    </optgroup>
-                    <optgroup label="Conference USA">                   
-                        <option value="Charlotte">Charlotte</option>
-                        <option value="East Carolina">East Carolina</option>
-                        <option value="Florida Atlantic">Florida Atlantic</option>
-                        <option value="Florida International">Florida International</option>
-                        <option value="Marshall">Marshall</option>
-                        <option value="Middle Tennessee">7</option>
-                        <option value="Old Dominion">Old Dominion</option>
-                        <option value="Western Kentucky">Western Kentucky</option>
-                        <option value="Louisiana Tech">Louisiana Tech</option>
-                        <option value="North Texas">North Texas</option>
-                        <option value="Rice">Rice</option>
-                        <option value="Southern Mississippi">Southern Miss</option>
-                        <option value="UAB">UAB</option>
-                        <option value="UTEP">UTEP</option>
-                        <option value="UTSA">UTSA</option>
-                    </optgroup>
-                    <optgroup label="Independents">
-                        <option value="Army">Army</option>
-                        <option value="BYU">BYU</option>
-                        <option value="Liberty">Liberty</option>
-                        <option value="New Mexico State">New Mexico State</option>
-                        <option value="Notre Dame">Notre Dame</option>
-                        <option value="UMass">UMass</option>
-                    </optgroup>
-                    <optgroup label="Mid-American">                     
-                        <option value="Akron">Akron</option>
-                        <option value="Bowling Green">Bowling Green</option>
-                        <option value="Buffalo">Buffalo</option>
-                        <option value="Kent State">Kent State</option>
-                        <option value="Miami (OH)">Miami (OH)</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Ball State">Ball State</option>
-                        <option value="Central Michigan">Central Michigan</option>
-                        <option value="Eastern Michigan">Eastern Michigan</option>
-                        <option value="Northern Illinois">Northern Illinois</option>
-                        <option value="Toledo">Toledo</option>
-                        <option value="Western Michigan">Western Michigan</option>
-                    </optgroup>
-                    <optgroup label="Mountain West">                       
-                        <option value="Fresno State">Fresno State</option>
-                        <option value="Hawai'i">Hawaii</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="San Diego State">San Diego State</option>
-                        <option value="UNLV">6</option>
-                        <option value="Air Force">Air Force</option>
-                        <option value="Boise State">Boise State</option>
-                        <option value="Colorado State">Colorado State</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="Utah State">Utah State</option>
-                        <option value="Wyoming">Wyoming</option>
-                    </optgroup>
-                    <optgroup label="Pac-12">
-                        <option value="California">California</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Oregon State">Oregon State</option>
-                        <option value="Stanford">Stanford</option>
-                        <option value="Washington">Washington</option>
-                        <option value="Washington State">Washington State</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arizona State">Arizona State</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="UCLA">UCLA</option>
-                        <option value="USC">USC</option>
-                        <option value="Utah">Utah</option>
-                    </optgroup>
-                    <optgroup label="SEC">
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Vanderbilt">Vanderbilt</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="Auburn">Auburn</option>
-                        <option value="LSU">LSU</option>
-                        <option value="Mississippi State">Mississippi State</option>
-                        <option value="Ole Miss">Ole Miss</option>
-                        <option value="Texas A&amp;M">Texas A&amp;M</option>
-                    </optgroup>   
-                    <optgroup label="Sun Belt">
-                        <option value="Appalachian State">Appalachian State</option>
-                        <option value="Coastal Carolina">Coastal Carolina</option>
-                        <option value="Georgia Southern">Georgia Southern</option>
-                        <option value="Georgia State">Georgia State</option>
-                        <option value="Troy">Troy</option>
-                        <option value="Arkansas State">Arkansas State</option>
-                        <option value="Louisiana">Louisiana-Lafayette</option>
-                        <option value="Louisiana Monroe">Louisiana-Monroe</option>
-                        <option value="South Alabama">South Alabama</option>
-                        <option value="Texas State">Texas State</option>
-                    </optgroup>                                                                                                                                         
-                    </select>
-            </div>
-
-            <div class="form_group">
-                <label for="week">Choose a Week:</label>
-                <select name="week" id="week" required>
-                <optgroup label="Regular Season">
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                </optgroup>
-                <optgroup label="Post-Season">
-                    <option value="14">Conference Chamionship Week</option>
-                    <option value="15">Bowl Game</option>
-                </optgroup>
-                </select>
-            </div>
-
-            <div class="form_group">
-                <label for="neutral_site">Neutral Site?</label>
-                <select name="neutral_site" id="neutral" required>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-            </div>  
-
-            <input type="submit" name="predict" value="Predict Matchup"/>
-        </form>
-
-        {% if empty %}
-
-        {% else %}
-            <h2>
-                {% if neutral_site %}
-                    {% if week == 14 %}
-                    Predictions for {{teams.away}} vs {{teams.home}} at a neutral site in Conference Championship Week:
-                    {% elif week == 15 %}
-                    Predictions for {{teams.away}} vs {{teams.home}} at a neutral site in a Bowl Game:                   
-                    {% else %}
-                    Predictions for {{teams.away}} vs {{teams.home}} at a neutral site in Week {{week}}:
-                    {% endif %}                
-                {% else %}
-                    {% if week == 14 %}
-                    Predictions for {{teams.away}} at {{teams.home}} in Conference Championship Week:
-                    {% elif week == 15 %}
-                    Predictions for {{teams.away}} at {{teams.home}} in a Bowl Game:                   
-                    {% else %}
-                    Predictions for {{teams.away}} at {{teams.home}} in Week {{week}}:
-                    {% endif %}
-                {% endif %}
-            </h2>
-            <div>
-                <p>Linear Regression Model:
-                    {% if predictions.linear < 0 %}
-                    {{teams.away}} by {{predictions.linear * -1}}
-                    {% else %}
-                    {{teams.home}} by {{predictions.linear}}
-                    {% endif %}
-                </p>
-                <p>Lasso Regression Model: 
-                    {% if predictions.lasso < 0 %}
-                    {{teams.away}} by {{predictions.lasso * -1}}
-                    {% else %}
-                    {{teams.home}} by {{predictions.lasso}}
-                    {% endif %}
-                </p>
-                <p>Neural Network Model: 
-                    {% if predictions.neural < 0 %}
-                    {{teams.away}} by {{'%0.1f'| format(predictions.neural * -1|float)}}
-                    {% else %}
-                    {{teams.home}} by {{'%0.1f'| format(predictions.neural|float)}}
-                    {% endif %}
-                </p>
-                <h3>Average Prediction:
-                    {% if average < 0 %}
-                    {{teams.away}} by {{average * -1}}
-                    {% else %}
-                    {{teams.home}} by {{average}}
-                    {% endif %}                    
-                </h3>
-            </div>
-        {% endif %}
+        <footer id="footer" class="site-footer">
+            <a href="/about/">About the Models</a>
+        </footer>
     </body>
 
 </html>

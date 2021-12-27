@@ -1,0 +1,78 @@
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.site-content {
+    margin-top: 60px;
+}
+
+.site-branding {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.site-header {
+    background-color: #20292b;
+    padding: 18px;
+}
+
+.site-title a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-description {
+    font-size: 16px;
+    color: #5e5e5e;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	word-break: break-word;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.5;
+	color: #383a3f;
+	font-size: 16px;
+}
+
+content {
+    margin-top: 60px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content-area {
+    width: 100%;
+}
+
+main {
+    display: block;
+}
+
+.intro-heading, .data-heading, .model-head {
+    font-family: 'Oswald', sans-serif;
+    color: #3c4e52;
+}
+
+.introduction {
+    font-size: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    padding-left: 15px;
+}

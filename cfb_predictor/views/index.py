@@ -4,9 +4,8 @@ CFB_PREDICTOR (main) view
 URLs include:
 /
 """
-from math import trunc
 import flask
-import cfb_predictor
+import cfb_predictor 
 from cfb_predictor.views.predict import predict
 
 @cfb_predictor.app.route('/')
@@ -33,7 +32,21 @@ def show_index():
         'away': away_team
     }
 
-    linear, lasso, neural = predict(home_team,away_team,week,neutral_site)
+    N = 3
+
+    sum_linear = 0
+    sum_lasso = 0
+    sum_neural = 0
+
+    for i in range(N):
+        cur_linear, cur_lasso, cur_neural = predict(home_team,away_team,week,neutral_site)
+        sum_linear += cur_linear
+        sum_lasso += cur_lasso
+        sum_neural += cur_neural
+    
+    linear = sum_linear / N
+    lasso = sum_lasso / N
+    neural = sum_neural / N
 
     linear = round(linear,1)
     lasso = round(lasso,1)

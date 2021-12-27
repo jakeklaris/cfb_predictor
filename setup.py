@@ -28,6 +28,7 @@ setup(
         'scipy',
         'seaborn',
         'sklearn',
+        'gunicorn',
     ],
     python_requires='>=3.6',
 )

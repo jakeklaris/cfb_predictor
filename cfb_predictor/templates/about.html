@@ -2,38 +2,106 @@
 <html lang="en">
     <head>
         <title>College Football Predictor</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     </head>
     <body>
-        With the Michigan Semi-Final looming, my mind couldn't be more focused on CFB. I thought now would be a good time to further my Python Data Analytics knowledge as well as put into practice some machine learning methods that I learned this past semester.
+        <div id="main-content" class="main-content">
+            <div id="intro-heading" class="intro-heading">
+                <h1>Introduction</h2>
+            </div>
+            <div id="intro" class="introduction">
+                <p>As a Junior at the University of Michigan, I have been preparing for the biggest college football
+                game at the university in a few decades. With Michigan playing Georgia in a few days, and coming off an incredibly exciting
+                college football season, my mind is squarely on College Football.</p>
 
-        Here I have built a model that aims to predict the scoring margin of two college football teams in a game (a spread, if you will). It compares it against the current spread in Vegas to make a prediction on which side of the spread to take.
-        
-        I have built 3 models using three common machine learning methods --> Linear Regression, Lasso Regression and Neural Networks.
-        
-        Linear -->  validated it with MSE and R^2
-        Neural --> trained it to minimize MAE, with a learning rate that minimizes MAE
-        
-        First Step: Scraping ESPN for SP+ Rankings on a team for a given week
-        
-        10 attributes of a given game are taken into account when determining the predicted margin of victory. SP+ ranking differential (scraped from ESPN website), ELO differential (taken from collegefootballdata.com), home team are a few examples.
-        
-        The good news is all three of my models predict Michigan to outperform the current spread from Vegas. The bad news is Vegas's spread still has Mich losing by 7.5 so outperforming that doesn't mean much.
-        
-        After creating the predictor on the backend, I decided to make a Web Application that would show my predictions for all upcoming games in a nice UI. Although I don't enjoy front end development much, Flask provides an easy way to attach my back-end code and it didn't take too much effort to make a playable UI.
-        
-        This was a passion project for me but I would love to hear any feedback or thoughts that anyone has. I hope to continue developing this project and making it better using more data and correlated attributes. Maybe one day we can actually beat Vegas at a strong clip! See below for a link to the website and to my gtihub repo where all my code is currently living.
-        
-        Sources: 
-        collegefootballdata API for Vegas odds and most attributes
-        Espn SP+ rankings (weekly) for SP+ diff attribute
-        
-        Sklearn for linear/lasso regression
-        Fastai for neural network learning
-        
-        Pandas for data analysis and manipulation
-        Bs4 for web scraping
-        
-        Flask for web development 
-        Google app engine/Github pages for web hosting 
+                <p>Having just completed courses in Artifical Intelligence and Web Systems, I thought there would be no better time
+                to apply my newly aqcuired knowledge to my love of College Football.</p>
+
+                <p>Here I have developed a system that uses three different machine learning models
+                    to predict the score margin of a game at any point in the 2021 College Football Season</p>
+
+            </div>
+            <hr>
+
+            <div id="data-heading" class="data-heading">
+                <h1>Gathering the Data</h2>
+            </div>
+
+            <div id="data-gathering" class="data-gathering">
+                <p>   
+                    First Step: Scraping ESPN for SP+ Rankings on a team for a given week
+                    10 attributes of a given game are taken into account when determining 
+                    the predicted margin of victory. SP+ ranking differential (scraped from ESPN website), 
+                    ELO differential (taken from collegefootballdata.com), home team are a few examples.
+                </p>
+            </div>
+
+            <hr>
+
+            <div id="model-header" class="model-head">
+                <h1>Models</h1>
+            </div>
+
+            <div id="model1-header" class="model-header">
+                <h3>Linear Regression</h3>
+            </div>
+
+            <div id="linear" class="linear">
+                <p>stuff for linear</p>
+            </div>
+
+            <div id="model2-header" class="model-header">
+                <h3>Lasso Regression</h3>
+            </div>
+
+            <div id="linear" class="linear">
+                <p>stuff for linear</p>
+            </div>
+
+            <div id="model3-header" class="model-header">
+                <h3>Neural Network</h3>
+            </div>
+
+            <div id="linear" class="linear">
+                <p>stuff for linear</p>
+            </div>
+
+            <hr>
+
+            <div id="footer" class="footer">
+                <i>Jake Klaristenfeld</i>
+                <br>
+                <i>December 27, 2021</i>
+            </div>
+            Here I have built a model that aims to predict the scoring margin of two college football teams in a game (a spread, if you will). It compares it against the current spread in Vegas to make a prediction on which side of the spread to take.
+            
+            I have built 3 models using three common machine learning methods --> Linear Regression, Lasso Regression and Neural Networks.
+            
+            Linear -->  validated it with MSE and R^2
+            Neural --> trained it to minimize MAE, with a learning rate that minimizes MAE
+            
+            First Step: Scraping ESPN for SP+ Rankings on a team for a given week
+            
+            10 attributes of a given game are taken into account when determining the predicted margin of victory. SP+ ranking differential (scraped from ESPN website), ELO differential (taken from collegefootballdata.com), home team are a few examples.
+            
+            The good news is all three of my models predict Michigan to outperform the current spread from Vegas. The bad news is Vegas's spread still has Mich losing by 7.5 so outperforming that doesn't mean much.
+            
+            After creating the predictor on the backend, I decided to make a Web Application that would show my predictions for all upcoming games in a nice UI. Although I don't enjoy front end development much, Flask provides an easy way to attach my back-end code and it didn't take too much effort to make a playable UI.
+            
+            This was a passion project for me but I would love to hear any feedback or thoughts that anyone has. I hope to continue developing this project and making it better using more data and correlated attributes. Maybe one day we can actually beat Vegas at a strong clip! See below for a link to the website and to my gtihub repo where all my code is currently living.
+            
+            Sources: 
+            collegefootballdata API for Vegas odds and most attributes
+            Espn SP+ rankings (weekly) for SP+ diff attribute
+            
+            Sklearn for linear/lasso regression
+            Fastai for neural network learning
+            
+            Pandas for data analysis and manipulation
+            Bs4 for web scraping
+            
+            Flask for web development 
+            Google app engine/Github pages for web hosting 
+        </div>
     </body>
 </html>
