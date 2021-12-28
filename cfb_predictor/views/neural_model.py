@@ -1,3 +1,5 @@
+import pathlib
+from fastai.learner import load
 import numpy as np
 import pandas as pd
 from fastai.tabular import *
@@ -35,7 +37,19 @@ class NeuralNet:
         # train the model
         self.learn = tabular_learner(self.dls, metrics=mae, lr=10e-3)
         self.learn.fit(4)
- 
+
+        # cwd = pathlib.Path(os.getcwd())
+        # self.learn.path = cwd/'trained_models'
+        # self.learn.export('neural1.pkl')
+
+    def predict_from_trained(self, single_df, file):
+        path = pathlib.Path(os.getcwd())/'trained_models'
+        file_path = path/file
+        model = load_learner(file_path)
+        dl = model.dls.test_dl(single_df)
+        prediction = model.get_preds(dl=dl)[0].numpy()    
+        return prediction
+
     def predict_single(self, single_df):
         dl = self.learn.dls.test_dl(single_df)
         prediction = self.learn.get_preds(dl=dl)[0].numpy()    

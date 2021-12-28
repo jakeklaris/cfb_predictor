@@ -27,6 +27,7 @@ def show_index():
         'away': away_team
     }
 
+    # max 5 --> 5 trained models per ml type
     N = 3
 
     sum_linear = 0
@@ -34,7 +35,7 @@ def show_index():
     sum_neural = 0
 
     for i in range(N):
-        cur_linear, cur_lasso, cur_neural = predict(home_team,away_team,week,neutral_site)
+        cur_linear, cur_lasso, cur_neural = predict(home_team,away_team,week,neutral_site,i)
         sum_linear += cur_linear
         sum_lasso += cur_lasso
         sum_neural += cur_neural

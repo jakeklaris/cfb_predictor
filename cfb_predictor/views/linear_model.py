@@ -4,6 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso
 from sklearn import metrics
+import pathlib
+import os
+import pickle
 
 from views.data import create_data_frame, create_single_data_frame
 from views.rankings import load_rankings
@@ -39,11 +42,27 @@ class RegressionModel:
 
 
         self.model.fit(self.train_features, self.train_labels)
+
+        # cwd = pathlib.Path(os.getcwd())
+        # model_dir = cwd/'trained_models'
+                                 
+        # file_path = model_dir/file
+        # pickle.dump(self.model, open(file_path, 'wb'))
+
     
+    def predict_from_trained(self, single_df, file):
+        # load trained model
+        path = pathlib.Path(os.getcwd())/'trained_models'
+        file_path = path/file
+        model = pickle.load(open(file_path, 'rb'))
+
+        # predict 
+        features = single_df.drop(['GameID','Week','Home_Team','Away_Team','Score_Diff','Real_Odds'], axis=1)
+        return(model.predict(features))
+
     def predict_single(self, single_df):
         features = single_df.drop(['GameID','Week','Home_Team','Away_Team','Score_Diff','Real_Odds'], axis=1)
-        self.predicted_margin = self.model.predict(features)
-        return self.predicted_margin
+        return(self.model.predict(features))
 
     def evaluate_model(self,plot=False,train=False):
         features = self.train_features if train else self.test_features
