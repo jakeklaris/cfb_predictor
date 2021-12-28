@@ -33,7 +33,7 @@ def show_index():
     team_rankings = load_rankings()
 
     # max 5 --> 5 trained models per ml type
-    N = 1
+    N = 2
 
     sum_linear = 0
     sum_lasso = 0
@@ -46,9 +46,9 @@ def show_index():
         sum_lasso += cur_lasso
         sum_neural += cur_neural
     
-    linear = sum_linear / N
-    lasso = sum_lasso / N
-    neural = sum_neural / N
+    linear = (sum_linear / N) if home_team != away_team else 0.0
+    lasso = (sum_lasso / N) if home_team != away_team else 0.0
+    neural = (sum_neural / N) if home_team != away_team else 0.0
 
     linear = round(linear,1)
     lasso = round(lasso,1)
