@@ -14,7 +14,7 @@ from views.rankings import load_rankings
 
 class RegressionModel:
 
-    def __init__(self,rankings,data,model_type):
+    def __init__(self,rankings=None,data=None,model_type='Linear'):
         assert(model_type in ['Linear','Lasso'])
         self.rankings = rankings
         self.model_type = model_type

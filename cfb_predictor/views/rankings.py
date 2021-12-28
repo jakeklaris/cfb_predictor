@@ -1,4 +1,6 @@
 import pathlib
+import json
+import os
 from config import RANKINGS_FOLDER
 
 NAME_CHANGE = {
@@ -58,7 +60,14 @@ NAME_CHANGE = {
     'App. St.': 'Appalachian State'
 }
 
-def load_rankings():
+def load_rankings_from_disc():
+    cwd = pathlib.Path(os.getcwd())
+    file_path = cwd/'rankings'/'rankings.json'
+    with open(file_path,'r') as fp:
+        data = json.load(fp)
+    return data
+
+def load_rankings(save_to_disc = False):
     team_rankings = {}
     dir = pathlib.Path(RANKINGS_FOLDER)
     for i in range(2,16):
@@ -101,6 +110,14 @@ def load_rankings():
                 if team_name not in team_rankings.keys():
                     team_rankings[team_name] = {}
                 team_rankings[team_name][i] = ratings
+
+    if save_to_disc:
+        cwd = pathlib.Path(os.getcwd())
+        file_path = cwd/'rankings'/'rankings.json'       
+        with open(file_path,'w') as fp:
+            json.dump(team_rankings, fp)
+
+    
     return team_rankings
 
 def get_diffs(week, team1, team2, TEAM_RANKINGS):

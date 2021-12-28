@@ -1,5 +1,7 @@
 import flask
+from views.rankings import load_rankings
 from views.predict import predict
+from views.rankings import load_rankings_from_disc
 
 app = flask.Flask(__name__)
 
@@ -27,15 +29,19 @@ def show_index():
         'away': away_team
     }
 
+
+    team_rankings = load_rankings()
+
     # max 5 --> 5 trained models per ml type
-    N = 3
+    N = 1
 
     sum_linear = 0
     sum_lasso = 0
     sum_neural = 0
 
+
     for i in range(N):
-        cur_linear, cur_lasso, cur_neural = predict(home_team,away_team,week,neutral_site,i)
+        cur_linear, cur_lasso, cur_neural = predict(home_team,away_team,week,neutral_site,i,team_rankings)
         sum_linear += cur_linear
         sum_lasso += cur_lasso
         sum_neural += cur_neural
