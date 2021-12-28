@@ -1,14 +1,9 @@
-"""
-CFB_PREDICTOR (main) view
-
-URLs include:
-/
-"""
 import flask
-import cfb_predictor 
-from cfb_predictor.views.predict import predict
+from views.predict import predict
 
-@cfb_predictor.app.route('/')
+app = flask.Flask(__name__)
+
+@app.route('/')
 def show_index():
     """Display / route."""
 
@@ -69,6 +64,16 @@ def show_index():
     }
     return flask.render_template("index.html", **context)
 
-@cfb_predictor.app.route('/about/')
+@app.route('/about/')
 def show_about():
     return flask.render_template("about.html")
+
+if __name__ == '__main__':
+    # This is used when running locally only. When deploying to Google App
+    # Engine, a webserver process such as Gunicorn will serve the app. This
+    # can be configured by adding an `entrypoint` to app.yaml.
+    # Flask's development server will automatically serve static files in
+    # the "static" directory. See:
+    # http://flask.pocoo.org/docs/1.0/quickstart/#static-files. Once deployed,
+    # App Engine itself will serve those files as configured in app.yaml.
+    app.run(host='127.0.0.1', port=8080, debug=True)

@@ -5,8 +5,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso
 from sklearn import metrics
 
-from cfb_predictor.views.data import create_data_frame, create_single_data_frame
-from cfb_predictor.views.rankings import load_rankings
+from views.data import create_data_frame, create_single_data_frame
+from views.rankings import load_rankings
 
 
 class RegressionModel:

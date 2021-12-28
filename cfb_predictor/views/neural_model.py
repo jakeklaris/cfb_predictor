@@ -3,8 +3,8 @@ import pandas as pd
 from fastai.tabular import *
 from fastai.tabular.all import *
 
-from cfb_predictor.views.data import create_data_frame
-from cfb_predictor.views.rankings import load_rankings
+from views.data import create_data_frame
+from views.rankings import load_rankings
 
 
 class NeuralNet:

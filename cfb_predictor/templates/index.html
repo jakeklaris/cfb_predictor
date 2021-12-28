@@ -24,157 +24,157 @@
                     <form action="/" method="get" enctype="multipart/form-data">
                         <div class="form_group">
                             <label for="home_team">Choose a Home Team</label>
-                            <select name="home_team" id="home_team" required>
+                            <select name="home_team" id="home_team" value="Clemson" required>
                                 <optgroup label="ACC">
-                                    <option value="Boston College">Boston College</option>
-                                    <option value="Clemson">Clemson</option>
-                                    <option value="Florida State">Florida State</option>
-                                    <option value="Louisville">Louisville</option>
-                                    <option value="NC State">NC State</option>
-                                    <option value="Syracuse">Syracuse</option>
-                                    <option value="Wake Forest">Wake Forest</option>
-                                    <option value="Duke">Duke</option>
-                                    <option value="Georgia Tech">Georgia Tech</option>
-                                    <option value="North Carolina">North Carolina</option>
-                                    <option value="Pittsburgh">Pitt</option>
-                                    <option value="Virginia">Virginia</option>
-                                    <option value="Virginia Tech">Virginia Tech</option>
+                                    <option value="Boston College"{% if teams.home == "Boston College" %} selected="selected" {% endif %}>Boston College</option>
+                                    <option value="Clemson"{% if teams.home == "Clemson" %} selected="selected" {% endif %}>Clemson</option>
+                                    <option value="Florida State"{% if teams.home == "Florida State" %} selected="selected" {% endif %}>Florida State</option>
+                                    <option value="Louisville"{% if teams.home == "Louisville" %} selected="selected" {% endif %}>Louisville</option>
+                                    <option value="NC State"{% if teams.home == "NC State" %} selected="selected" {% endif %}>NC State</option>
+                                    <option value="Syracuse"{% if teams.home == "Syracuse" %} selected="selected" {% endif %}>Syracuse</option>
+                                    <option value="Wake Forest"{% if teams.home == "Wake Forest" %} selected="selected" {% endif %}>Wake Forest</option>
+                                    <option value="Duke"{% if teams.home == "Duke" %} selected="selected" {% endif %}>Duke</option>
+                                    <option value="Georgia Tech"{% if teams.home == "Georgia Tech" %} selected="selected" {% endif %}>Georgia Tech</option>
+                                    <option value="North Carolina"{% if teams.home == "North Carolina" %} selected="selected" {% endif %}>North Carolina</option>
+                                    <option value="Pittsburgh"{% if teams.home == "Pittsburgh" %} selected="selected" {% endif %}>Pitt</option>
+                                    <option value="Virginia"{% if teams.home == "Virginia" %} selected="selected" {% endif %}>Virginia</option>
+                                    <option value="Virginia Tech"{% if teams.home == "Virginia Tech" %} selected="selected" {% endif %}>Virginia Tech</option>
                                 </optgroup>
                                 <optgroup label="American">
-                                    <option value="Cincinnati">Cincinnati</option>
-                                    <option value="Connecticut">UConn</option>
-                                    <option value="East Carolina">East Carolina</option>
-                                    <option value="South Florida">USF</option>
-                                    <option value="Temple">Temple</option>
-                                    <option value="UCF">UCF</option>
-                                    <option value="Houston">Houston</option>
-                                    <option value="Memphis">Memphis</option>
-                                    <option value="Navy">Navy</option>
-                                    <option value="SMU">SMU</option>
-                                    <option value="Tulane">Tulane</option>
-                                    <option value="Tulsa">Tulsa</option>
+                                    <option value="Cincinnati"{% if teams.home == "Cincinnati" %} selected="selected" {% endif %}>Cincinnati</option>
+                                    <option value="Connecticut"{% if teams.home == "Connecticut" %} selected="selected" {% endif %}>UConn</option>
+                                    <option value="East Carolina"{% if teams.home == "East Carolina" %} selected="selected" {% endif %}>East Carolina</option>
+                                    <option value="South Florida"{% if teams.home == "South Florida" %} selected="selected" {% endif %}>USF</option>
+                                    <option value="Temple"{% if teams.home == "Temple" %} selected="selected" {% endif %}>Temple</option>
+                                    <option value="UCF"{% if teams.home == "UCF" %} selected="selected" {% endif %}>UCF</option>
+                                    <option value="Houston"{% if teams.home == "Houston" %} selected="selected" {% endif %}>Houston</option>
+                                    <option value="Memphis"{% if teams.home == "Memphis" %} selected="selected" {% endif %}>Memphis</option>
+                                    <option value="Navy"{% if teams.home == "Navy" %} selected="selected" {% endif %}>Navy</option>
+                                    <option value="SMU"{% if teams.home == "SMU" %} selected="selected" {% endif %}>SMU</option>
+                                    <option value="Tulane"{% if teams.home == "Tulane" %} selected="selected" {% endif %}>Tulane</option>
+                                    <option value="Tulsa"{% if teams.home == "Tulsa" %} selected="selected" {% endif %}>Tulsa</option>
                                 </optgroup>
                                 <optgroup label="Big 12">
-                                    <option value="Baylor">Baylor</option>
-                                    <option value="Iowa State">Iowa State</option>
-                                    <option value="Kansas">Kansas</option>
-                                    <option value="Kansas State">Kansas State</option>
-                                    <option value="Oklahoma">Oklahoma</option>
-                                    <option value="Oklahoma State">Oklahoma State</option>
-                                    <option value="TCU">TCU</option>
-                                    <option value="Texas">Texas</option>
-                                    <option value="Texas Tech">Texas Tech</option>
-                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Baylor"{% if teams.home == "Baylor" %} selected="selected" {% endif %}>Baylor</option>
+                                    <option value="Iowa State"{% if teams.home == "Iowa State" %} selected="selected" {% endif %}>Iowa State</option>
+                                    <option value="Kansas"{% if teams.home == "Kansas" %} selected="selected" {% endif %}>Kansas</option>
+                                    <option value="Kansas State"{% if teams.home == "Kansas State" %} selected="selected" {% endif %}>Kansas State</option>
+                                    <option value="Oklahoma"{% if teams.home == "Oklahoma" %} selected="selected" {% endif %}>Oklahoma</option>
+                                    <option value="Oklahoma State"{% if teams.home == "Oklahoma State" %} selected="selected" {% endif %}>Oklahoma State</option>
+                                    <option value="TCU"{% if teams.home == "TCU" %} selected="selected" {% endif %}>TCU</option>
+                                    <option value="Texas"{% if teams.home == "Texas" %} selected="selected" {% endif %}>Texas</option>
+                                    <option value="Texas Tech"{% if teams.home == "Texas Tech" %} selected="selected" {% endif %}>Texas Tech</option>
+                                    <option value="West Virginia"{% if teams.home == "West Virginia" %} selected="selected" {% endif %}>West Virginia</option>
                                 </optgroup>
                                 <optgroup label="Big Ten">                                              
-                                    <option value="Indiana">Indiana</option>
-                                    <option value="Maryland">Maryland</option>
-                                    <option value="Michigan">Michigan</option>
-                                    <option value="Michigan State">Michigan State</option>
-                                    <option value="Ohio State">Ohio State</option>
-                                    <option value="Penn State">Penn State</option>
-                                    <option value="Rutgers">Rutgers</option>
-                                    <option value="Illinois">Illinois</option>
-                                    <option value="Iowa">Iowa</option>
-                                    <option value="Minnesota">Minnesota</option>
-                                    <option value="Nebraska">Nebraska</option>
-                                    <option value="Northwestern">Northwestern</option>
-                                    <option value="Purdue">Purdue</option>
-                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Indiana">{% if teams.home == "Indiana" %} selected="selected" {% endif %}Indiana</option>
+                                    <option value="Maryland"{% if teams.home == "Maryland" %} selected="selected" {% endif %}>Maryland</option>
+                                    <option value="Michigan"{% if teams.home == "Michigan" %} selected="selected" {% endif %}>Michigan</option>
+                                    <option value="Michigan State"{% if teams.home == "Michigan State" %} selected="selected" {% endif %}>Michigan State</option>
+                                    <option value="Ohio State"{% if teams.home == "Ohio State" %} selected="selected" {% endif %}>Ohio State</option>
+                                    <option value="Penn State"{% if teams.home == "Penn State" %} selected="selected" {% endif %}>Penn State</option>
+                                    <option value="Rutgers"{% if teams.home == "Rutgers" %} selected="selected" {% endif %}>Rutgers</option>
+                                    <option value="Illinois"{% if teams.home == "Illinois" %} selected="selected" {% endif %}>Illinois</option>
+                                    <option value="Iowa"{% if teams.home == "Iowa" %} selected="selected" {% endif %}>Iowa</option>
+                                    <option value="Minnesota"{% if teams.home == "Minnesota" %} selected="selected" {% endif %}>Minnesota</option>
+                                    <option value="Nebraska"{% if teams.home == "Nebraska" %} selected="selected" {% endif %}>Nebraska</option>
+                                    <option value="Northwestern"{% if teams.home == "Northwestern" %} selected="selected" {% endif %}>Northwestern</option>
+                                    <option value="Purdue"{% if teams.home == "Purdue" %} selected="selected" {% endif %}>Purdue</option>
+                                    <option value="Wisconsin"{% if teams.home == "Wisconsin" %} selected="selected" {% endif %}>Wisconsin</option>
                                 </optgroup>
                                 <optgroup label="Conference USA">                   
-                                    <option value="Charlotte">Charlotte</option>
-                                    <option value="East Carolina">East Carolina</option>
-                                    <option value="Florida Atlantic">Florida Atlantic</option>
-                                    <option value="Florida International">Florida International</option>
-                                    <option value="Marshall">Marshall</option>
-                                    <option value="Middle Tennessee">Middle Tennessee</option>
-                                    <option value="Old Dominion">Old Dominion</option>
-                                    <option value="Western Kentucky">Western Kentucky</option>
-                                    <option value="Louisiana Tech">Louisiana Tech</option>
-                                    <option value="North Texas">North Texas</option>
-                                    <option value="Rice">Rice</option>
-                                    <option value="Southern Mississippi">Southern Miss</option>
-                                    <option value="UAB">UAB</option>
-                                    <option value="UTEP">UTEP</option>
-                                    <option value="UTSA">UTSA</option>
+                                    <option value="Charlotte"{% if teams.home == "Charlotte" %} selected="selected" {% endif %}>Charlotte</option>
+                                    <option value="East Carolina"{% if teams.home == "East Carolina" %} selected="selected" {% endif %}>East Carolina</option>
+                                    <option value="Florida Atlantic"{% if teams.home == "Florida Atlantic" %} selected="selected" {% endif %}>Florida Atlantic</option>
+                                    <option value="Florida International"{% if teams.home == "Florida International" %} selected="selected" {% endif %}>Florida International</option>
+                                    <option value="Marshall"{% if teams.home == "Marshall" %} selected="selected" {% endif %}>Marshall</option>
+                                    <option value="Middle Tennessee"{% if teams.home == "Middle Tennessee" %} selected="selected" {% endif %}>Middle Tennessee</option>
+                                    <option value="Old Dominion"{% if teams.home == "Old Dominion" %} selected="selected" {% endif %}>Old Dominion</option>
+                                    <option value="Western Kentucky"{% if teams.home == "Western Kentucky" %} selected="selected" {% endif %}>Western Kentucky</option>
+                                    <option value="Louisiana Tech"{% if teams.home == "Louisiana Tech" %} selected="selected" {% endif %}>Louisiana Tech</option>
+                                    <option value="North Texas"{% if teams.home == "North Texas" %} selected="selected" {% endif %}>North Texas</option>
+                                    <option value="Rice"{% if teams.home == "Rice" %} selected="selected" {% endif %}>Rice</option>
+                                    <option value="Southern Mississippi"{% if teams.home == "Southern Mississippi" %} selected="selected" {% endif %}>Southern Miss</option>
+                                    <option value="UAB"{% if teams.home == "UAB" %} selected="selected" {% endif %}>UAB</option>
+                                    <option value="UTEP"{% if teams.home == "UTEP" %} selected="selected" {% endif %}>UTEP</option>
+                                    <option value="UTSA"{% if teams.home == "UTSA" %} selected="selected" {% endif %}>UTSA</option>
                                 </optgroup>
                                 <optgroup label="Independents">
-                                    <option value="Army">Army</option>
-                                    <option value="BYU">BYU</option>
-                                    <option value="Liberty">Liberty</option>
-                                    <option value="New Mexico State">New Mexico State</option>
-                                    <option value="Notre Dame">Notre Dame</option>
-                                    <option value="UMass">UMass</option>
+                                    <option value="Army"{% if teams.home == "Army" %} selected="selected" {% endif %}>Army</option>
+                                    <option value="BYU"{% if teams.home == "BYU" %} selected="selected" {% endif %}>BYU</option>
+                                    <option value="Liberty"{% if teams.home == "Liberty" %} selected="selected" {% endif %}>Liberty</option>
+                                    <option value="New Mexico State"{% if teams.home == "New Mexico State" %} selected="selected" {% endif %}>New Mexico State</option>
+                                    <option value="Notre Dame"{% if teams.home == "Notre Dame" %} selected="selected" {% endif %}>Notre Dame</option>
+                                    <option value="UMass"{% if teams.home == "UMass" %} selected="selected" {% endif %}>UMass</option>
                                 </optgroup>
                                 <optgroup label="Mid-American">                     
-                                    <option value="Akron">Akron</option>
-                                    <option value="Bowling Green">Bowling Green</option>
-                                    <option value="Buffalo">Buffalo</option>
-                                    <option value="Kent State">Kent State</option>
-                                    <option value="Miami (OH)">Miami (OH)</option>
-                                    <option value="Ohio">Ohio</option>
-                                    <option value="Ball State">Ball State</option>
-                                    <option value="Central Michigan">Central Michigan</option>
-                                    <option value="Eastern Michigan">Eastern Michigan</option>
-                                    <option value="Northern Illinois">Northern Illinois</option>
-                                    <option value="Toledo">Toledo</option>
-                                    <option value="Western Michigan">Western Michigan</option>
+                                    <option value="Akron"{% if teams.home == "Akron" %} selected="selected" {% endif %}>Akron</option>
+                                    <option value="Bowling Green"{% if teams.home == "Bowling Green" %} selected="selected" {% endif %}>Bowling Green</option>
+                                    <option value="Buffalo"{% if teams.home == "Buffalo" %} selected="selected" {% endif %}>Buffalo</option>
+                                    <option value="Kent State"{% if teams.home == "Kent State" %} selected="selected" {% endif %}>Kent State</option>
+                                    <option value="Miami (OH)"{% if teams.home == "Miami (OH)" %} selected="selected" {% endif %}>Miami (OH)</option>
+                                    <option value="Ohio"{% if teams.home == "Ohio" %} selected="selected" {% endif %}>Ohio</option>
+                                    <option value="Ball State"{% if teams.home == "Ball State" %} selected="selected" {% endif %}>Ball State</option>
+                                    <option value="Central Michigan"{% if teams.home == "Central Michigan" %} selected="selected" {% endif %}>Central Michigan</option>
+                                    <option value="Eastern Michigan"{% if teams.home == "Eastern Michigan" %} selected="selected" {% endif %}>Eastern Michigan</option>
+                                    <option value="Northern Illinois"{% if teams.home == "Northern Illinois" %} selected="selected" {% endif %}>Northern Illinois</option>
+                                    <option value="Toledo"{% if teams.home == "Toledo" %} selected="selected" {% endif %}>Toledo</option>
+                                    <option value="Western Michigan"{% if teams.home == "Western Michigan" %} selected="selected" {% endif %}>Western Michigan</option>
                                 </optgroup>
                                 <optgroup label="Mountain West">                       
-                                    <option value="Fresno State">Fresno State</option>
-                                    <option value="Hawai'i">Hawaii</option>
-                                    <option value="Nevada">Nevada</option>
-                                    <option value="San Diego State">San Diego State</option>
-                                    <option value="UNLV">UNLV</option>
-                                    <option value="Air Force">Air Force</option>
-                                    <option value="Boise State">Boise State</option>
-                                    <option value="Colorado State">Colorado State</option>
-                                    <option value="New Mexico">New Mexico</option>
-                                    <option value="Utah State">Utah State</option>
-                                    <option value="Wyoming">Wyoming</option>
+                                    <option value="Fresno State"{% if teams.home == "Fresno State" %} selected="selected" {% endif %}>Fresno State</option>
+                                    <option value="Hawai'i"{% if teams.home == "Hawai'i" %} selected="selected" {% endif %}>Hawaii</option>
+                                    <option value="Nevada"{% if teams.home == "Nevada" %} selected="selected" {% endif %}>Nevada</option>
+                                    <option value="San Diego State"{% if teams.home == "San Diego State" %} selected="selected" {% endif %}>San Diego State</option>
+                                    <option value="UNLV"{% if teams.home == "UNLV" %} selected="selected" {% endif %}>UNLV</option>
+                                    <option value="Air Force"{% if teams.home == "Air Force" %} selected="selected" {% endif %}>Air Force</option>
+                                    <option value="Boise State"{% if teams.home == "Boise State" %} selected="selected" {% endif %}>Boise State</option>
+                                    <option value="Colorado State"{% if teams.home == "Colorado State" %} selected="selected" {% endif %}>Colorado State</option>
+                                    <option value="New Mexico"{% if teams.home == "New Mexico" %} selected="selected" {% endif %}>New Mexico</option>
+                                    <option value="Utah State"{% if teams.home == "Utah State" %} selected="selected" {% endif %}>Utah State</option>
+                                    <option value="Wyoming"{% if teams.home == "Wyoming" %} selected="selected" {% endif %}>Wyoming</option>
                                 </optgroup>
                                 <optgroup label="Pac-12">
-                                    <option value="California">California</option>
-                                    <option value="Oregon">Oregon</option>
-                                    <option value="Oregon State">Oregon State</option>
-                                    <option value="Stanford">Stanford</option>
-                                    <option value="Washington">Washington</option>
-                                    <option value="Washington State">Washington State</option>
-                                    <option value="Arizona">Arizona</option>
-                                    <option value="Arizona State">Arizona State</option>
-                                    <option value="Colorado">Colorado</option>
-                                    <option value="UCLA">UCLA</option>
-                                    <option value="USC">USC</option>
-                                    <option value="Utah">Utah</option>
+                                    <option value="California"{% if teams.home == "California" %} selected="selected" {% endif %}>California</option>
+                                    <option value="Oregon"{% if teams.home == "Oregon" %} selected="selected" {% endif %}>Oregon</option>
+                                    <option value="Oregon State"{% if teams.home == "Oregon State" %} selected="selected" {% endif %}>Oregon State</option>
+                                    <option value="Stanford"{% if teams.home == "Stanford" %} selected="selected" {% endif %}>Stanford</option>
+                                    <option value="Washington"{% if teams.home == "Washington" %} selected="selected" {% endif %}>Washington</option>
+                                    <option value="Washington State"{% if teams.home == "Washington State" %} selected="selected" {% endif %}>Washington State</option>
+                                    <option value="Arizona"{% if teams.home == "Arizona" %} selected="selected" {% endif %}>Arizona</option>
+                                    <option value="Arizona State"{% if teams.home == "Arizona State" %} selected="selected" {% endif %}>Arizona State</option>
+                                    <option value="Colorado"{% if teams.home == "Colorado" %} selected="selected" {% endif %}>Colorado</option>
+                                    <option value="UCLA"{% if teams.home == "UCLA" %} selected="selected" {% endif %}>UCLA</option>
+                                    <option value="USC"{% if teams.home == "USC" %} selected="selected" {% endif %}>USC</option>
+                                    <option value="Utah"{% if teams.home == "Utah" %} selected="selected" {% endif %}>Utah</option>
                                 </optgroup>
                                 <optgroup label="SEC">
-                                    <option value="Florida">Florida</option>
-                                    <option value="Georgia">Georgia</option>
-                                    <option value="Kentucky">Kentucky</option>
-                                    <option value="Missouri">Missouri</option>
-                                    <option value="South Carolina">South Carolina</option>
-                                    <option value="Tennessee">Tennessee</option>
-                                    <option value="Vanderbilt">Vanderbilt</option>
-                                    <option value="Alabama">Alabama</option>
-                                    <option value="Arkansas">Arkansas</option>
-                                    <option value="Auburn">Auburn</option>
-                                    <option value="LSU">LSU</option>
-                                    <option value="Mississippi State">Mississippi State</option>
-                                    <option value="Ole Miss">Ole Miss</option>
-                                    <option value="Texas A&amp;M">Texas A&amp;M</option>
+                                    <option value="Florida"{% if teams.home == "Florida" %} selected="selected" {% endif %}>Florida</option>
+                                    <option value="Georgia"{% if teams.home == "Georgia" %} selected="selected" {% endif %}>Georgia</option>
+                                    <option value="Kentucky"{% if teams.home == "Kentucky" %} selected="selected" {% endif %}>Kentucky</option>
+                                    <option value="Missouri"{% if teams.home == "Missouri" %} selected="selected" {% endif %}>Missouri</option>
+                                    <option value="South Carolina"{% if teams.home == "South Carolina" %} selected="selected" {% endif %}>South Carolina</option>
+                                    <option value="Tennessee"{% if teams.home == "Tennessee" %} selected="selected" {% endif %}>Tennessee</option>
+                                    <option value="Vanderbilt"{% if teams.home == "Vanderbilt" %} selected="selected" {% endif %}>Vanderbilt</option>
+                                    <option value="Alabama"{% if teams.home == "Alabama" %} selected="selected" {% endif %}>Alabama</option>
+                                    <option value="Arkansas"{% if teams.home == "Arkansas" %} selected="selected" {% endif %}>Arkansas</option>
+                                    <option value="Auburn"{% if teams.home == "Auburn" %} selected="selected" {% endif %}>Auburn</option>
+                                    <option value="LSU"{% if teams.home == "LSU" %} selected="selected" {% endif %}>LSU</option>
+                                    <option value="Mississippi State"{% if teams.home == "Mississippi State" %} selected="selected" {% endif %}>Mississippi State</option>
+                                    <option value="Ole Miss"{% if teams.home == "Ole Miss" %} selected="selected" {% endif %}>Ole Miss</option>
+                                    <option value="Texas A&amp;M"{% if teams.home == "Texas A&amp;M" %} selected="selected" {% endif %}>Texas A&amp;M</option>
                                 </optgroup>   
                                 <optgroup label="Sun Belt">
-                                    <option value="Appalachian State">Appalachian State</option>
-                                    <option value="Coastal Carolina">Coastal Carolina</option>
-                                    <option value="Georgia Southern">Georgia Southern</option>
-                                    <option value="Georgia State">Georgia State</option>
-                                    <option value="Troy">Troy</option>
-                                    <option value="Arkansas State">Arkansas State</option>
-                                    <option value="Louisiana">Louisiana-Lafayette</option>
-                                    <option value="Louisiana Monroe">Louisiana-Monroe</option>
-                                    <option value="South Alabama">South Alabama</option>
-                                    <option value="Texas State">Texas State</option>
+                                    <option value="Appalachian State"{% if teams.home == "Appalachian State" %} selected="selected" {% endif %}>Appalachian State</option>
+                                    <option value="Coastal Carolina"{% if teams.home == "Coastal Carolina" %} selected="selected" {% endif %}>Coastal Carolina</option>
+                                    <option value="Georgia Southern"{% if teams.home == "Georgia Southern" %} selected="selected" {% endif %}>Georgia Southern</option>
+                                    <option value="Georgia State"{% if teams.home == "Georgia State" %} selected="selected" {% endif %}>Georgia State</option>
+                                    <option value="Troy"{% if teams.home == "Troy" %} selected="selected" {% endif %}>Troy</option>
+                                    <option value="Arkansas State"{% if teams.home == "Arkansas State" %} selected="selected" {% endif %}>Arkansas State</option>
+                                    <option value="Louisiana"{% if teams.home == "Louisiana" %} selected="selected" {% endif %}>Louisiana-Lafayette</option>
+                                    <option value="Louisiana Monroe"{% if teams.home == "Louisiana Monroe" %} selected="selected" {% endif %}>Louisiana-Monroe</option>
+                                    <option value="South Alabama"{% if teams.home == "South Alabama" %} selected="selected" {% endif %}>South Alabama</option>
+                                    <option value="Texas State"{% if teams.home == "Texas State" %} selected="selected" {% endif %}>Texas State</option>
                                 </optgroup>                                                                                                                                         
                                 </select>
                         </div>
@@ -183,156 +183,156 @@
                             <label for="away_team">Choose an Away Team</label>
                             <select name="away_team" id="away_team" required>
                                 <optgroup label="ACC">
-                                    <option value="Boston College">Boston College</option>
-                                    <option value="Clemson">Clemson</option>
-                                    <option value="Florida State">Florida State</option>
-                                    <option value="Louisville">Louisville</option>
-                                    <option value="NC State">NC State</option>
-                                    <option value="Syracuse">Syracuse</option>
-                                    <option value="Wake Forest">Wake Forest</option>
-                                    <option value="Duke">Duke</option>
-                                    <option value="Georgia Tech">Georgia Tech</option>
-                                    <option value="North Carolina">North Carolina</option>
-                                    <option value="Pittsburgh">Pitt</option>
-                                    <option value="Virginia">Virginia</option>
-                                    <option value="Virginia Tech">Virginia Tech</option>
+                                    <option value="Boston College"{% if teams.away == "Boston College" %} selected="selected" {% endif %}>Boston College</option>
+                                    <option value="Clemson"{% if teams.away == "Clemson" %} selected="selected" {% endif %}>Clemson</option>
+                                    <option value="Florida State"{% if teams.away == "Florida State" %} selected="selected" {% endif %}>Florida State</option>
+                                    <option value="Louisville"{% if teams.away == "Louisville" %} selected="selected" {% endif %}>Louisville</option>
+                                    <option value="NC State"{% if teams.away == "NC State" %} selected="selected" {% endif %}>NC State</option>
+                                    <option value="Syracuse"{% if teams.away == "Syracuse" %} selected="selected" {% endif %}>Syracuse</option>
+                                    <option value="Wake Forest"{% if teams.away == "Wake Forest" %} selected="selected" {% endif %}>Wake Forest</option>
+                                    <option value="Duke"{% if teams.away == "Duke" %} selected="selected" {% endif %}>Duke</option>
+                                    <option value="Georgia Tech"{% if teams.away == "Georgia Tech" %} selected="selected" {% endif %}>Georgia Tech</option>
+                                    <option value="North Carolina"{% if teams.away == "North Carolina" %} selected="selected" {% endif %}>North Carolina</option>
+                                    <option value="Pittsburgh"{% if teams.away == "Pittsburgh" %} selected="selected" {% endif %}>Pitt</option>
+                                    <option value="Virginia"{% if teams.away == "Virginia" %} selected="selected" {% endif %}>Virginia</option>
+                                    <option value="Virginia Tech"{% if teams.away == "Virginia Tech" %} selected="selected" {% endif %}>Virginia Tech</option>
                                 </optgroup>
                                 <optgroup label="American">
-                                    <option value="Cincinnati">Cincinnati</option>
-                                    <option value="Connecticut">UConn</option>
-                                    <option value="East Carolina">East Carolina</option>
-                                    <option value="South Florida">USF</option>
-                                    <option value="Temple">Temple</option>
-                                    <option value="UCF">UCF</option>
-                                    <option value="Houston">Houston</option>
-                                    <option value="Memphis">Memphis</option>
-                                    <option value="Navy">Navy</option>
-                                    <option value="SMU">SMU</option>
-                                    <option value="Tulane">Tulane</option>
-                                    <option value="Tulsa">Tulsa</option>
+                                    <option value="Cincinnati"{% if teams.away == "Cincinnati" %} selected="selected" {% endif %}>Cincinnati</option>
+                                    <option value="Connecticut"{% if teams.away == "Connecticut" %} selected="selected" {% endif %}>UConn</option>
+                                    <option value="East Carolina"{% if teams.away == "East Carolina" %} selected="selected" {% endif %}>East Carolina</option>
+                                    <option value="South Florida"{% if teams.away == "South Florida" %} selected="selected" {% endif %}>USF</option>
+                                    <option value="Temple"{% if teams.away == "Temple" %} selected="selected" {% endif %}>Temple</option>
+                                    <option value="UCF"{% if teams.away == "UCF" %} selected="selected" {% endif %}>UCF</option>
+                                    <option value="Houston"{% if teams.away == "Houston" %} selected="selected" {% endif %}>Houston</option>
+                                    <option value="Memphis"{% if teams.away == "Memphis" %} selected="selected" {% endif %}>Memphis</option>
+                                    <option value="Navy"{% if teams.away == "Navy" %} selected="selected" {% endif %}>Navy</option>
+                                    <option value="SMU"{% if teams.away == "SMU" %} selected="selected" {% endif %}>SMU</option>
+                                    <option value="Tulane"{% if teams.away == "Tulane" %} selected="selected" {% endif %}>Tulane</option>
+                                    <option value="Tulsa"{% if teams.away == "Tulsa" %} selected="selected" {% endif %}>Tulsa</option>
                                 </optgroup>
                                 <optgroup label="Big 12">
-                                    <option value="Baylor">Baylor</option>
-                                    <option value="Iowa State">Iowa State</option>
-                                    <option value="Kansas">Kansas</option>
-                                    <option value="Kansas State">Kansas State</option>
-                                    <option value="Oklahoma">Oklahoma</option>
-                                    <option value="Oklahoma State">Oklahoma State</option>
-                                    <option value="TCU">TCU</option>
-                                    <option value="Texas">Texas</option>
-                                    <option value="Texas Tech">Texas Tech</option>
-                                    <option value="West Virginia">West Virginia</option>
+                                    <option value="Baylor"{% if teams.away == "Baylor" %} selected="selected" {% endif %}>Baylor</option>
+                                    <option value="Iowa State"{% if teams.away == "Iowa State" %} selected="selected" {% endif %}>Iowa State</option>
+                                    <option value="Kansas"{% if teams.away == "Kansas" %} selected="selected" {% endif %}>Kansas</option>
+                                    <option value="Kansas State"{% if teams.away == "Kansas State" %} selected="selected" {% endif %}>Kansas State</option>
+                                    <option value="Oklahoma"{% if teams.away == "Oklahoma" %} selected="selected" {% endif %}>Oklahoma</option>
+                                    <option value="Oklahoma State"{% if teams.away == "Oklahoma State" %} selected="selected" {% endif %}>Oklahoma State</option>
+                                    <option value="TCU"{% if teams.away == "TCU" %} selected="selected" {% endif %}>TCU</option>
+                                    <option value="Texas"{% if teams.away == "Texas" %} selected="selected" {% endif %}>Texas</option>
+                                    <option value="Texas Tech"{% if teams.away == "Texas Tech" %} selected="selected" {% endif %}>Texas Tech</option>
+                                    <option value="West Virginia"{% if teams.away == "West Virginia" %} selected="selected" {% endif %}>West Virginia</option>
                                 </optgroup>
                                 <optgroup label="Big Ten">                                              
-                                    <option value="Indiana">Indiana</option>
-                                    <option value="Maryland">Maryland</option>
-                                    <option value="Michigan">Michigan</option>
-                                    <option value="Michigan State">Michigan State</option>
-                                    <option value="Ohio State">Ohio State</option>
-                                    <option value="Penn State">Penn State</option>
-                                    <option value="Rutgers">Rutgers</option>
-                                    <option value="Illinois">Illinois</option>
-                                    <option value="Iowa">Iowa</option>
-                                    <option value="Minnesota">Minnesota</option>
-                                    <option value="Nebraska">Nebraska</option>
-                                    <option value="Northwestern">Northwestern</option>
-                                    <option value="Purdue">Purdue</option>
-                                    <option value="Wisconsin">Wisconsin</option>
+                                    <option value="Indiana">{% if teams.away == "Indiana" %} selected="selected" {% endif %}Indiana</option>
+                                    <option value="Maryland"{% if teams.away == "Maryland" %} selected="selected" {% endif %}>Maryland</option>
+                                    <option value="Michigan"{% if teams.away == "Michigan" %} selected="selected" {% endif %}>Michigan</option>
+                                    <option value="Michigan State"{% if teams.away == "Michigan State" %} selected="selected" {% endif %}>Michigan State</option>
+                                    <option value="Ohio State"{% if teams.away == "Ohio State" %} selected="selected" {% endif %}>Ohio State</option>
+                                    <option value="Penn State"{% if teams.away == "Penn State" %} selected="selected" {% endif %}>Penn State</option>
+                                    <option value="Rutgers"{% if teams.away == "Rutgers" %} selected="selected" {% endif %}>Rutgers</option>
+                                    <option value="Illinois"{% if teams.away == "Illinois" %} selected="selected" {% endif %}>Illinois</option>
+                                    <option value="Iowa"{% if teams.away == "Iowa" %} selected="selected" {% endif %}>Iowa</option>
+                                    <option value="Minnesota"{% if teams.away == "Minnesota" %} selected="selected" {% endif %}>Minnesota</option>
+                                    <option value="Nebraska"{% if teams.away == "Nebraska" %} selected="selected" {% endif %}>Nebraska</option>
+                                    <option value="Northwestern"{% if teams.away == "Northwestern" %} selected="selected" {% endif %}>Northwestern</option>
+                                    <option value="Purdue"{% if teams.away == "Purdue" %} selected="selected" {% endif %}>Purdue</option>
+                                    <option value="Wisconsin"{% if teams.away == "Wisconsin" %} selected="selected" {% endif %}>Wisconsin</option>
                                 </optgroup>
                                 <optgroup label="Conference USA">                   
-                                    <option value="Charlotte">Charlotte</option>
-                                    <option value="East Carolina">East Carolina</option>
-                                    <option value="Florida Atlantic">Florida Atlantic</option>
-                                    <option value="Florida International">Florida International</option>
-                                    <option value="Marshall">Marshall</option>
-                                    <option value="Middle Tennessee">7</option>
-                                    <option value="Old Dominion">Old Dominion</option>
-                                    <option value="Western Kentucky">Western Kentucky</option>
-                                    <option value="Louisiana Tech">Louisiana Tech</option>
-                                    <option value="North Texas">North Texas</option>
-                                    <option value="Rice">Rice</option>
-                                    <option value="Southern Mississippi">Southern Miss</option>
-                                    <option value="UAB">UAB</option>
-                                    <option value="UTEP">UTEP</option>
-                                    <option value="UTSA">UTSA</option>
+                                    <option value="Charlotte"{% if teams.away == "Charlotte" %} selected="selected" {% endif %}>Charlotte</option>
+                                    <option value="East Carolina"{% if teams.away == "East Carolina" %} selected="selected" {% endif %}>East Carolina</option>
+                                    <option value="Florida Atlantic"{% if teams.away == "Florida Atlantic" %} selected="selected" {% endif %}>Florida Atlantic</option>
+                                    <option value="Florida International"{% if teams.away == "Florida International" %} selected="selected" {% endif %}>Florida International</option>
+                                    <option value="Marshall"{% if teams.away == "Marshall" %} selected="selected" {% endif %}>Marshall</option>
+                                    <option value="Middle Tennessee"{% if teams.away == "Middle Tennessee" %} selected="selected" {% endif %}>Middle Tennessee</option>
+                                    <option value="Old Dominion"{% if teams.away == "Old Dominion" %} selected="selected" {% endif %}>Old Dominion</option>
+                                    <option value="Western Kentucky"{% if teams.away == "Western Kentucky" %} selected="selected" {% endif %}>Western Kentucky</option>
+                                    <option value="Louisiana Tech"{% if teams.away == "Louisiana Tech" %} selected="selected" {% endif %}>Louisiana Tech</option>
+                                    <option value="North Texas"{% if teams.away == "North Texas" %} selected="selected" {% endif %}>North Texas</option>
+                                    <option value="Rice"{% if teams.away == "Rice" %} selected="selected" {% endif %}>Rice</option>
+                                    <option value="Southern Mississippi"{% if teams.away == "Southern Mississippi" %} selected="selected" {% endif %}>Southern Miss</option>
+                                    <option value="UAB"{% if teams.away == "UAB" %} selected="selected" {% endif %}>UAB</option>
+                                    <option value="UTEP"{% if teams.away == "UTEP" %} selected="selected" {% endif %}>UTEP</option>
+                                    <option value="UTSA"{% if teams.away == "UTSA" %} selected="selected" {% endif %}>UTSA</option>
                                 </optgroup>
                                 <optgroup label="Independents">
-                                    <option value="Army">Army</option>
-                                    <option value="BYU">BYU</option>
-                                    <option value="Liberty">Liberty</option>
-                                    <option value="New Mexico State">New Mexico State</option>
-                                    <option value="Notre Dame">Notre Dame</option>
-                                    <option value="UMass">UMass</option>
+                                    <option value="Army"{% if teams.away == "Army" %} selected="selected" {% endif %}>Army</option>
+                                    <option value="BYU"{% if teams.away == "BYU" %} selected="selected" {% endif %}>BYU</option>
+                                    <option value="Liberty"{% if teams.away == "Liberty" %} selected="selected" {% endif %}>Liberty</option>
+                                    <option value="New Mexico State"{% if teams.away == "New Mexico State" %} selected="selected" {% endif %}>New Mexico State</option>
+                                    <option value="Notre Dame"{% if teams.away == "Notre Dame" %} selected="selected" {% endif %}>Notre Dame</option>
+                                    <option value="UMass"{% if teams.away == "UMass" %} selected="selected" {% endif %}>UMass</option>
                                 </optgroup>
                                 <optgroup label="Mid-American">                     
-                                    <option value="Akron">Akron</option>
-                                    <option value="Bowling Green">Bowling Green</option>
-                                    <option value="Buffalo">Buffalo</option>
-                                    <option value="Kent State">Kent State</option>
-                                    <option value="Miami (OH)">Miami (OH)</option>
-                                    <option value="Ohio">Ohio</option>
-                                    <option value="Ball State">Ball State</option>
-                                    <option value="Central Michigan">Central Michigan</option>
-                                    <option value="Eastern Michigan">Eastern Michigan</option>
-                                    <option value="Northern Illinois">Northern Illinois</option>
-                                    <option value="Toledo">Toledo</option>
-                                    <option value="Western Michigan">Western Michigan</option>
+                                    <option value="Akron"{% if teams.away == "Akron" %} selected="selected" {% endif %}>Akron</option>
+                                    <option value="Bowling Green"{% if teams.away == "Bowling Green" %} selected="selected" {% endif %}>Bowling Green</option>
+                                    <option value="Buffalo"{% if teams.away == "Buffalo" %} selected="selected" {% endif %}>Buffalo</option>
+                                    <option value="Kent State"{% if teams.away == "Kent State" %} selected="selected" {% endif %}>Kent State</option>
+                                    <option value="Miami (OH)"{% if teams.away == "Miami (OH)" %} selected="selected" {% endif %}>Miami (OH)</option>
+                                    <option value="Ohio"{% if teams.away == "Ohio" %} selected="selected" {% endif %}>Ohio</option>
+                                    <option value="Ball State"{% if teams.away == "Ball State" %} selected="selected" {% endif %}>Ball State</option>
+                                    <option value="Central Michigan"{% if teams.away == "Central Michigan" %} selected="selected" {% endif %}>Central Michigan</option>
+                                    <option value="Eastern Michigan"{% if teams.away == "Eastern Michigan" %} selected="selected" {% endif %}>Eastern Michigan</option>
+                                    <option value="Northern Illinois"{% if teams.away == "Northern Illinois" %} selected="selected" {% endif %}>Northern Illinois</option>
+                                    <option value="Toledo"{% if teams.away == "Toledo" %} selected="selected" {% endif %}>Toledo</option>
+                                    <option value="Western Michigan"{% if teams.away == "Western Michigan" %} selected="selected" {% endif %}>Western Michigan</option>
                                 </optgroup>
                                 <optgroup label="Mountain West">                       
-                                    <option value="Fresno State">Fresno State</option>
-                                    <option value="Hawai'i">Hawaii</option>
-                                    <option value="Nevada">Nevada</option>
-                                    <option value="San Diego State">San Diego State</option>
-                                    <option value="UNLV">6</option>
-                                    <option value="Air Force">Air Force</option>
-                                    <option value="Boise State">Boise State</option>
-                                    <option value="Colorado State">Colorado State</option>
-                                    <option value="New Mexico">New Mexico</option>
-                                    <option value="Utah State">Utah State</option>
-                                    <option value="Wyoming">Wyoming</option>
+                                    <option value="Fresno State"{% if teams.away == "Fresno State" %} selected="selected" {% endif %}>Fresno State</option>
+                                    <option value="Hawai'i"{% if teams.away == "Hawai'i" %} selected="selected" {% endif %}>Hawaii</option>
+                                    <option value="Nevada"{% if teams.away == "Nevada" %} selected="selected" {% endif %}>Nevada</option>
+                                    <option value="San Diego State"{% if teams.away == "San Diego State" %} selected="selected" {% endif %}>San Diego State</option>
+                                    <option value="UNLV"{% if teams.away == "UNLV" %} selected="selected" {% endif %}>UNLV</option>
+                                    <option value="Air Force"{% if teams.away == "Air Force" %} selected="selected" {% endif %}>Air Force</option>
+                                    <option value="Boise State"{% if teams.away == "Boise State" %} selected="selected" {% endif %}>Boise State</option>
+                                    <option value="Colorado State"{% if teams.away == "Colorado State" %} selected="selected" {% endif %}>Colorado State</option>
+                                    <option value="New Mexico"{% if teams.away == "New Mexico" %} selected="selected" {% endif %}>New Mexico</option>
+                                    <option value="Utah State"{% if teams.away == "Utah State" %} selected="selected" {% endif %}>Utah State</option>
+                                    <option value="Wyoming"{% if teams.away == "Wyoming" %} selected="selected" {% endif %}>Wyoming</option>
                                 </optgroup>
                                 <optgroup label="Pac-12">
-                                    <option value="California">California</option>
-                                    <option value="Oregon">Oregon</option>
-                                    <option value="Oregon State">Oregon State</option>
-                                    <option value="Stanford">Stanford</option>
-                                    <option value="Washington">Washington</option>
-                                    <option value="Washington State">Washington State</option>
-                                    <option value="Arizona">Arizona</option>
-                                    <option value="Arizona State">Arizona State</option>
-                                    <option value="Colorado">Colorado</option>
-                                    <option value="UCLA">UCLA</option>
-                                    <option value="USC">USC</option>
-                                    <option value="Utah">Utah</option>
+                                    <option value="California"{% if teams.away == "California" %} selected="selected" {% endif %}>California</option>
+                                    <option value="Oregon"{% if teams.away == "Oregon" %} selected="selected" {% endif %}>Oregon</option>
+                                    <option value="Oregon State"{% if teams.away == "Oregon State" %} selected="selected" {% endif %}>Oregon State</option>
+                                    <option value="Stanford"{% if teams.away == "Stanford" %} selected="selected" {% endif %}>Stanford</option>
+                                    <option value="Washington"{% if teams.away == "Washington" %} selected="selected" {% endif %}>Washington</option>
+                                    <option value="Washington State"{% if teams.away == "Washington State" %} selected="selected" {% endif %}>Washington State</option>
+                                    <option value="Arizona"{% if teams.away == "Arizona" %} selected="selected" {% endif %}>Arizona</option>
+                                    <option value="Arizona State"{% if teams.away == "Arizona State" %} selected="selected" {% endif %}>Arizona State</option>
+                                    <option value="Colorado"{% if teams.away == "Colorado" %} selected="selected" {% endif %}>Colorado</option>
+                                    <option value="UCLA"{% if teams.away == "UCLA" %} selected="selected" {% endif %}>UCLA</option>
+                                    <option value="USC"{% if teams.away == "USC" %} selected="selected" {% endif %}>USC</option>
+                                    <option value="Utah"{% if teams.away == "Utah" %} selected="selected" {% endif %}>Utah</option>
                                 </optgroup>
                                 <optgroup label="SEC">
-                                    <option value="Florida">Florida</option>
-                                    <option value="Georgia">Georgia</option>
-                                    <option value="Kentucky">Kentucky</option>
-                                    <option value="Missouri">Missouri</option>
-                                    <option value="South Carolina">South Carolina</option>
-                                    <option value="Tennessee">Tennessee</option>
-                                    <option value="Vanderbilt">Vanderbilt</option>
-                                    <option value="Alabama">Alabama</option>
-                                    <option value="Arkansas">Arkansas</option>
-                                    <option value="Auburn">Auburn</option>
-                                    <option value="LSU">LSU</option>
-                                    <option value="Mississippi State">Mississippi State</option>
-                                    <option value="Ole Miss">Ole Miss</option>
-                                    <option value="Texas A&amp;M">Texas A&amp;M</option>
+                                    <option value="Florida"{% if teams.away == "Florida" %} selected="selected" {% endif %}>Florida</option>
+                                    <option value="Georgia"{% if teams.away == "Georgia" %} selected="selected" {% endif %}>Georgia</option>
+                                    <option value="Kentucky"{% if teams.away == "Kentucky" %} selected="selected" {% endif %}>Kentucky</option>
+                                    <option value="Missouri"{% if teams.away == "Missouri" %} selected="selected" {% endif %}>Missouri</option>
+                                    <option value="South Carolina"{% if teams.away == "South Carolina" %} selected="selected" {% endif %}>South Carolina</option>
+                                    <option value="Tennessee"{% if teams.away == "Tennessee" %} selected="selected" {% endif %}>Tennessee</option>
+                                    <option value="Vanderbilt"{% if teams.away == "Vanderbilt" %} selected="selected" {% endif %}>Vanderbilt</option>
+                                    <option value="Alabama"{% if teams.away == "Alabama" %} selected="selected" {% endif %}>Alabama</option>
+                                    <option value="Arkansas"{% if teams.away == "Arkansas" %} selected="selected" {% endif %}>Arkansas</option>
+                                    <option value="Auburn"{% if teams.away == "Auburn" %} selected="selected" {% endif %}>Auburn</option>
+                                    <option value="LSU"{% if teams.away == "LSU" %} selected="selected" {% endif %}>LSU</option>
+                                    <option value="Mississippi State"{% if teams.away == "Mississippi State" %} selected="selected" {% endif %}>Mississippi State</option>
+                                    <option value="Ole Miss"{% if teams.away == "Ole Miss" %} selected="selected" {% endif %}>Ole Miss</option>
+                                    <option value="Texas A&amp;M"{% if teams.away == "Texas A&amp;M" %} selected="selected" {% endif %}>Texas A&amp;M</option>
                                 </optgroup>   
                                 <optgroup label="Sun Belt">
-                                    <option value="Appalachian State">Appalachian State</option>
-                                    <option value="Coastal Carolina">Coastal Carolina</option>
-                                    <option value="Georgia Southern">Georgia Southern</option>
-                                    <option value="Georgia State">Georgia State</option>
-                                    <option value="Troy">Troy</option>
-                                    <option value="Arkansas State">Arkansas State</option>
-                                    <option value="Louisiana">Louisiana-Lafayette</option>
-                                    <option value="Louisiana Monroe">Louisiana-Monroe</option>
-                                    <option value="South Alabama">South Alabama</option>
-                                    <option value="Texas State">Texas State</option>
-                                </optgroup>                                                                                                                                         
+                                    <option value="Appalachian State"{% if teams.away == "Appalachian State" %} selected="selected" {% endif %}>Appalachian State</option>
+                                    <option value="Coastal Carolina"{% if teams.away == "Coastal Carolina" %} selected="selected" {% endif %}>Coastal Carolina</option>
+                                    <option value="Georgia Southern"{% if teams.away == "Georgia Southern" %} selected="selected" {% endif %}>Georgia Southern</option>
+                                    <option value="Georgia State"{% if teams.away == "Georgia State" %} selected="selected" {% endif %}>Georgia State</option>
+                                    <option value="Troy"{% if teams.away == "Troy" %} selected="selected" {% endif %}>Troy</option>
+                                    <option value="Arkansas State"{% if teams.away == "Arkansas State" %} selected="selected" {% endif %}>Arkansas State</option>
+                                    <option value="Louisiana"{% if teams.away == "Louisiana" %} selected="selected" {% endif %}>Louisiana-Lafayette</option>
+                                    <option value="Louisiana Monroe"{% if teams.away == "Louisiana Monroe" %} selected="selected" {% endif %}>Louisiana-Monroe</option>
+                                    <option value="South Alabama"{% if teams.away == "South Alabama" %} selected="selected" {% endif %}>South Alabama</option>
+                                    <option value="Texas State"{% if teams.away == "Texas State" %} selected="selected" {% endif %}>Texas State</option>
+                                </optgroup>                                                                                                                                        
                                 </select>
                         </div>
 
@@ -340,22 +340,22 @@
                             <label for="week">Choose a Week</label>
                             <select name="week" id="week" required>
                             <optgroup label="Regular Season">
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
+                                <option value="2"{% if week == 2 %} selected="selected"{% endif %}>2</option>
+                                <option value="3"{% if week == 3 %} selected="selected"{% endif %}>3</option>
+                                <option value="4"{% if week == 4 %} selected="selected"{% endif %}>4</option>
+                                <option value="5"{% if week == 5 %} selected="selected"{% endif %}>5</option>
+                                <option value="6"{% if week == 6 %} selected="selected"{% endif %}>6</option>
+                                <option value="7"{% if week == 7 %} selected="selected"{% endif %}>7</option>
+                                <option value="8"{% if week == 8 %} selected="selected"{% endif %}>8</option>
+                                <option value="9"{% if week == 9 %} selected="selected"{% endif %}>9</option>
+                                <option value="10"{% if week == 10 %} selected="selected"{% endif %}>10</option>
+                                <option value="11"{% if week == 11 %} selected="selected"{% endif %}>11</option>
+                                <option value="12"{% if week == 12 %} selected="selected"{% endif %}>12</option>
+                                <option value="13"{% if week == 13 %} selected="selected"{% endif %}>13</option>
                             </optgroup>
                             <optgroup label="Post-Season">
-                                <option value="14">Conference Chamionship Week</option>
-                                <option value="15">Bowl Game</option>
+                                <option value="14"{% if week == 14 %} selected="selected"{% endif %}>Conference Chamionship Week</option>
+                                <option value="15"{% if week == 15 %} selected="selected"{% endif %}>Bowl Game</option>
                             </optgroup>
                             </select>
                         </div>
@@ -363,8 +363,8 @@
                         <div class="form_group">
                             <label for="neutral_site">Neutral Site?</label>
                             <select name="neutral_site" id="neutral" required>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
+                                <option value="yes"{% if neutral_site %} selected="selected"{% endif %}>Yes</option>
+                                <option value="no"{% if not neutral_site %} selected="selected"{% endif %}>No</option>
                             </select>
                         </div>  
 

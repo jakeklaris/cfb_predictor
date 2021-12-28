@@ -1,5 +1,5 @@
 import pathlib
-from cfb_predictor.config import RANKINGS_FOLDER
+from config import RANKINGS_FOLDER
 
 NAME_CHANGE = {
     'Ohio St.': 'Ohio State',
