@@ -11,7 +11,7 @@ from views.rankings import load_rankings
 
 class NeuralNet:
 
-    def __init__(self,rankings,data):
+    def __init__(self,rankings=None,data=None):
         self.rankings = rankings
         self.df = data
     
