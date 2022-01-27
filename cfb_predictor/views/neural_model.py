@@ -15,7 +15,7 @@ class NeuralNet:
         self.rankings = rankings
         self.df = data
     
-    def create_model(self, test_size=.1):
+    def create_model(self, fileno=0,test_size=.1):
         self.test_df = self.df.sample(frac = test_size)
         self.train_df = self.df.drop(self.test_df.index)
         
@@ -40,7 +40,8 @@ class NeuralNet:
 
         # cwd = pathlib.Path(os.getcwd())
         # self.learn.path = cwd/'trained_models'
-        # self.learn.export('neural1.pkl')
+        # file_name = 'neural' + str(fileno) + '.pkl'
+        # self.learn.export(file_name)
 
     def predict_from_trained(self, single_df, file):
         path = pathlib.Path(os.getcwd())/'trained_models'

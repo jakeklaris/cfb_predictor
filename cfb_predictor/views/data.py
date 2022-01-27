@@ -1,8 +1,8 @@
 import pandas as pd
 import logging
 
-from odds import get_real_odds, get_games, get_elo_diff
-from rankings import get_diffs
+from views.odds import get_real_odds, get_games, get_elo_diff
+from views.rankings import get_diffs
 
 def add_spreads(data):
     # data == list[list]

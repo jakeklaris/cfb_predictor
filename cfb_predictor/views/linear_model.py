@@ -20,7 +20,7 @@ class RegressionModel:
         self.model_type = model_type
         self.df = data
     
-    def create_model(self, test_size=.1):
+    def create_model(self, file_no=0, test_size=.1):
         self.df.replace({'Conference_Game': {True: 1, False: 0}}, inplace=True)
         self.df.replace({'Neutral_Site': {True: 1, False: 0}}, inplace=True)
 
@@ -45,7 +45,8 @@ class RegressionModel:
 
         # cwd = pathlib.Path(os.getcwd())
         # model_dir = cwd/'trained_models'
-                                 
+        # file = 'linear' if self.model_type == 'Linear' else 'lasso'
+        # file = file + str(file_no) + '.sav'
         # file_path = model_dir/file
         # pickle.dump(self.model, open(file_path, 'wb'))
 
@@ -127,12 +128,6 @@ def main():
     # create Linear model
     model = RegressionModel(team_rankings, data, 'Linear')
     model.create_model()
-    
-    # new_game = create_single_data_frame(team_rankings, home_team='Wisconsin', \
-    #     away_team='Michigan', neutral_site=False, week=4)
-    # print(model.predict_single(new_game)[0])
-    # print(model.predict_single(new_game)[0])
-
 
     # run and evaluate model on training data
     model.evaluate_model(train=True)
@@ -143,7 +138,6 @@ def main():
     model.evaluate_model(train=False)
     percent_correct, num_trials = model.predict_against_spread(train=False)
     print("{}% Correct over {} Predictions\n".format(percent_correct*100, num_trials))
-
 
     # create Lasso model
     model = RegressionModel(team_rankings, data, 'Lasso')
