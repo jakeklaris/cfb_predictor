@@ -1,9 +1,0 @@
-█epoch     train_loss  valid_loss  mae       time    
-██0         335.064117  324.512634  13.851320 00:00     
-██1         309.564850  257.244415  12.629781 00:00     
-██2         294.245880  243.570343  12.385223 00:00     
-██3         284.500732  252.704483  12.579346 00:00     
-█50.16556291390728% Correct over 604 Predictions on Training Data
-
-█53.73134328358209% Correct over 67 Predictions on Test Data
-

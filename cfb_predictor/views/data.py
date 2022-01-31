@@ -5,7 +5,6 @@ from views.odds import get_real_odds, get_games, get_elo_diff
 from views.rankings import get_diffs
 
 def add_spreads(data):
-    # data == list[list]
     lines = get_real_odds()
     for game in data:
         if game[0] in lines.keys():

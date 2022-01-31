@@ -63,8 +63,6 @@ class NeuralNet:
         return 'Home' if row['Score_Diff'] > row['Real_Odds'] else 'Away'
 
     def predict_against_spread(self, train=False):
-        # print df with predicted score margin
-
         predicted_df = self.train_df.copy() if train else self.test_df.copy()
         dl = self.learn.dls.test_dl(predicted_df)
         predicted_df['Predicted_Margin'] = self.learn.get_preds(dl=dl)[0].numpy()

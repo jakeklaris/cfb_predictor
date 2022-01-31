@@ -93,8 +93,6 @@ class RegressionModel:
         return 'Home' if row['Real_Margin'] > row['Vegas_Spread'] else 'Away'
 
     def predict_against_spread(self, train=False):
-        # print df with predicted score margin
-
         prediction_df = self.train_features.copy() \
             if train else self.test_features.copy()
         
